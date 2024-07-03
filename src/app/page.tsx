@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Experience from "@/components/Experience";
 import Project from "@/components/Project";
 import Link from "next/link";
 
@@ -34,11 +35,12 @@ export default function Home() {
             </Link>
           </p>
       </div>
+      <Experience />
 
       <About/>
       <Project/>
       <Contact/>
-
+      
     </main>
   );
 }

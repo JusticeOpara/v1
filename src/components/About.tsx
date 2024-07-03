@@ -62,13 +62,13 @@ const About = () => {
           </div>
 
           <div className="mt-5">
-            <p className="">
+            <p className="font-light">
               Here are a few technologies I’ve been working with recently:
             </p>
-            <ul className="grid grid-cols-2 md:grid-cols-3 py-0 list-none">
+            <ul className="grid grid-cols-2 md:grid-cols-4 list-none gap-4 text-center">
               {skills &&
                 skills.map((skill, i) => (
-                  <li key={i} className="relative mb-5 text-sm">
+                  <li key={i} className="relative mb-3 text-sm uppercase font-light py-2 flex justify-center items-center bg-[#5b38e3] rounded">
                     ✨{skill}
                   </li>
                 ))}
@@ -76,19 +76,19 @@ const About = () => {
           </div>
         </div>
 
-        <div className="pb-2 pr-2 border-b-4 border-r-4 border-[#202020] flex justify-center">
-          <div
-            className="bg-blue-300 relative w-60 h-60 lg:w-[400px] lg:h-[400px] p-6 rounded-lg bg-green shadow-md transition-transform 
-          duration-300 ease-in-out transform hover:-translate-x-4 hover:-translate-y-4 focus:outline-none"
-          >
+        <div className="relative max-w-[300px] mx-auto sm:mt-[50px] sm:w-[70%]">
+          <div className="relative block w-full group">
             <Image
-              className="filter-none mix-blend-normal rounded-md"
+              className="relative rounded filter grayscale-[100%] contrast-[1] group-hover:filter-none group-hover:mix-blend-normal group-hover:translate-x-[8px] group-hover:translate-y-[8px]"
               src="/profileImage.jpeg"
-              fill
-              objectFit="cover"
+              width={500}
+              height={500}
               quality={95}
-              alt="Profile"
+              objectFit="cover"
+              alt="Proflie"
             />
+            <div className="absolute top-0 left-0 w-full h-full  bg-[#202020] mix-blend-screen transition-custom"></div>
+            <div className="absolute top-[14px] left-[14px] w-full h-full rounded border-4 border-[#5b38e3] group-hover:translate-x-[8px] group-hover:translate-y-[8px] -z-10"></div>
           </div>
         </div>
       </div>

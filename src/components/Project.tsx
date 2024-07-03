@@ -64,18 +64,17 @@ const Project = () => {
   }, [featuredProjects, prefersReducedMotion]);
 
   return (
-    <section id="projects" className="md:py-[100px] py-12 ">
-      <div className="flex gap-2 ">
-        <h2 className="mb-5 flex-shrink-0">
-          {" "}
-          <span className="text-2xl font-dosis">02.</span>
-          <span className="text-3xl font-medium font"> Recent projects </span>
-        </h2>
+    <section id="work" className="md:py-[100px] py-12 bg-white">
+       <div className="flex gap-2">
+       <h2 className="mb-5 flex-shrink-0">
+           <span className="text-2xl font-dosis">02.</span>
+           <span className="text-3xl font-medium"> Recent projects </span>
+         </h2>
         <div className="border-t flex-grow lg:flex-grow-0 w-72 border-black my-4"></div>
-        
-      </div>
+       </div>
 
-      <ul className=" bg-blue-500">
+      <ul>
+
         {featuredProjects.map((project, i) => {
           const { external, title, tech, github, cover, html } = project;
 
@@ -85,12 +84,12 @@ const Project = () => {
               ref={(el) => {
                 revealProjects.current[i] = el;
               }}
-              className={`relative grid gap-2 grid-cols-12 items-center ${
+              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] hover: shadow-2xl ${
                 i % 2 !== 0 ? "md:flex-row-reverse flex" : ""
               } mb-24 md:mb-16 sm:mb-8`}
             >
-              <div className="relative xcol-span-7 col-span-12 row-span-full z-10 md:col-span-full md:p-5 sm:p-2 bg-blue-400 flex items-end flex-col w-full">
-                <p className="mb-2 text-green-500 font-poppins text-xs">
+              <div className="relative col-span-12 row-span-full z-10 md:col-span-full md:p-5 p-2 rounded flex md:items-end flex-col">
+                <p className="mb-2 text-[#F7D046] font-poppins text-sm">
                   Featured Project
                 </p>
 
@@ -101,14 +100,14 @@ const Project = () => {
                 </h3>
 
                 <div
-                  className="relative z-20 p-6 font-dosis text-light-slate text-lg rounded-md shadow-md bg-red-500 w-full"
+                  className="relative z-20 p-6 font-dosis text-light-slate text-lg rounded-md shadow-md bg-[#5b38e3] w-full"
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
                 />
 
                 {tech.length && (
                   <ul className="flex flex-wrap mt-6 mb-2 p-0 list-none">
                     {tech.map((tech, i) => (
-                      <li key={i} className="mr-5 mb-1  text-sm md:mr-2">
+                      <li key={i} className="mr-5 mb-1 text-sm md:mr-2">
                         {tech}
                       </li>
                     ))}
@@ -120,13 +119,14 @@ const Project = () => {
                     <Link
                       href={github}
                       aria-label="GitHub Link"
-                      className="flex-center mx-2 cursor-pointer"
+                      className="flex-center mx-2 cursor-pointer "
                     >
                       <Image
                         src="/github.svg"
                         width={20}
                         height={20}
                         alt={github}
+                        className="text-[#5b38e3]"
                       />
                     </Link>
                   )}
@@ -151,21 +151,21 @@ const Project = () => {
               <div className="relative hidden md:block z-10 col-start-6 col-end-auto row-span-full shadow-custom md:col-span-full md:h-full md:opacity-25">
                 <Link
                   href={external ? external : github ? github : "#"}
-                  className="w-[50%] h-full bg-green-500 rounded-custom align-middle block relative focus:outline-none focus:bg-transparent hover:bg-transparent group"
+                  className="w-[50%] h-full bg-[#f7d046] rounded-custom align-middle block relative focus:outline-none focus:bg-transparent hover:bg-transparent group"
                 >
                   <div className="absolute inset-0 z-30 transition-custom mix-blend-screen group-hover:bg-transparent"></div>
                   <img
                     src={cover}
                     alt={title}
-                    className="rounded-custom mix-blend-multiply filter grayscale contrast-100 brightness-90 md:object-cover md:w-auto md:h-full md:filter md:grayscale md:contrast-100 mdd:brightness-100"
+                    className="rounded-custom mix-blend-multiply filter grayscale contrast-100 brightness-90 md:object-cover md:w-auto md:h-full"
                   />
                 </Link>
               </div>
             </li>
           );
         })}
-      </ul>
-    </section>
+      </ul> 
+     </section>
   );
 };
 
