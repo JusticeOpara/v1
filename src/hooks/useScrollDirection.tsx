@@ -7,6 +7,8 @@ const useScrollDirection = ({ initialDirection = 'up', thresholdPixels = 0, off 
   const [scrollDir, setScrollDir] = useState(initialDirection);
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const threshold = thresholdPixels || 0;
     let lastScrollY = window.pageYOffset;
     let ticking = false;

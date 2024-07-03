@@ -15,7 +15,7 @@ const About = () => {
     }
 
     sr.reveal(revealContainer.current, srConfig());
-  }, []);
+  }, [prefersReducedMotion]);
 
   const skills = [
     "JavaScript (ES6+)",

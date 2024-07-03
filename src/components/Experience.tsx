@@ -131,14 +131,16 @@ const Experience: React.FC = () => {
           {jobsData.map((job, i) => (
             <button
               key={i}
-              isActive={activeTabId === i}
+              // isActive={activeTabId === i}
+              style={activeTabId === i ? { background: "active" } : {}}
               onClick={() => setActiveTabId(i)}
-              ref={(el) => (tabs.current[i] = el)}
+              ref={(el) => { if (el) tabs.current[i] = el; }}
               id={`tab-${i}`}
               role="tab"
               tabIndex={activeTabId === i ? 0 : -1}
               aria-selected={activeTabId === i}
               aria-controls={`panel-${i}`}
+             
               className={`flex items-center w-full h-12 px-4 mb-2 border-l-2 text-left whitespace-nowrap bg-red-500 ${
                 activeTabId === i
                   ? "border-[#5b38e3] text-[#5b38e3]"
@@ -147,6 +149,8 @@ const Experience: React.FC = () => {
             >
               {job.company}
             </button>
+            
+            
           ))}
           <div
             className="absolute left-0 w-1 bg-[#5b38e3] transition-transform duration-300 ease-in-out"
@@ -192,5 +196,22 @@ const Experience: React.FC = () => {
     </section>
   );
 };
-
+{/* <button
+key={i}
+isActive={activeTabId === i}
+onClick={() => setActiveTabId(i)}
+ref={(el) => (tabs.current[i] = el)}
+id={`tab-${i}`}
+role="tab"
+tabIndex={activeTabId === i ? 0 : -1}
+aria-selected={activeTabId === i}
+aria-controls={`panel-${i}`}
+className={`flex items-center w-full h-12 px-4 mb-2 border-l-2 text-left whitespace-nowrap bg-red-500 ${
+  activeTabId === i
+    ? "border-[#5b38e3] text-[#5b38e3]"
+    : "border-transparent text-[#202020]"
+} focus:bg-light-navy hover:bg-light-navy`}
+>
+{job.company}
+</button> */}
 export default Experience;

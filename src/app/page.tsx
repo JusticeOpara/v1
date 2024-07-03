@@ -1,12 +1,15 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Experience from "@/components/Experience";
+import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
 import Link from "next/link";
 
 
 export default function Home() {
   return (
+    <>
+     <Navbar  isHero={true}/>
     <main className="bg-slate-400 h-full w-full 2xl:px-[200px] lg:px-[150px] mx-auto px-12">
       <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
         <h1 className="font-bold text-5xl">Hi,</h1>
@@ -42,5 +45,8 @@ export default function Home() {
       <Contact/>
       
     </main>
+    
+    </>
+   
   );
 }
