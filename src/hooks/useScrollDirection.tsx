@@ -1,3 +1,6 @@
+"use client"
+
+
 const SCROLL_UP = 'up';
 const SCROLL_DOWN = 'down';
 

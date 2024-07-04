@@ -9,13 +9,13 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-     <Navbar  isHero={true}/>
-    <main className="bg-slate-400 h-full w-full 2xl:px-[200px] lg:px-[150px] mx-auto px-12">
+     <Navbar  isHero={true}/> 
+    <main className="h-full w-full 2xl:px-[200px] lg:px-[150px] mx-auto px-12">
       <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
         <h1 className="font-bold text-5xl">Hi,</h1>
 
         <h2 className="font-bold text-5xl ">I am <span className="text-[#5b38e3]"> Justin Opara</span></h2>
-        <h2 className="font-bold text-5xl ">
+        <h2 className="font-bold text-5xl">
           I build things for the web.
         </h2>
         <p className="font-poppin font-light max-w-[600px] lg:text-lg text-base">
@@ -38,12 +38,12 @@ export default function Home() {
             </Link>
           </p>
       </div>
-      <Experience />
+     <Experience/> 
 
-      <About/>
-      <Project/>
-      <Contact/>
-      
+       <About/>  
+       <Project/>   
+      <Contact/>  
+       
     </main>
     
     </>

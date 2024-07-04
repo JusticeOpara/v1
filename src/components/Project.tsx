@@ -8,6 +8,7 @@ import { usePrefersReducedMotion } from "@/hooks";
 import Link from "next/link";
 import Image from "next/image";
 
+
 // Define the type for the project data
 interface ProjectData {
   external: string;
@@ -45,36 +46,39 @@ const Project = () => {
   const [featuredProjects, setFeaturedProjects] = useState<ProjectData[]>([]);
   const revealTitle = useRef(null);
   const revealProjects = useRef<(HTMLLIElement | null)[]>([]);
-  const prefersReducedMotion = usePrefersReducedMotion();
+  const prefersReducedMotion = usePrefersReducedMotion(); 
 
   useEffect(() => {
     // Set the dummy data
     setFeaturedProjects(dummyData);
   }, []);
-
+  
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    const isClient = typeof window !== "undefined";
 
-    sr.reveal(revealTitle.current, srConfig());
-    revealProjects.current.forEach((ref, i) =>
-      sr.reveal(ref, srConfig(i * 100))
-    );
+    if (isClient && !prefersReducedMotion) {
+      import("@/utils/sr").then(({ default: sr }) => {
+        sr.reveal(revealTitle.current, srConfig());
+        revealProjects.current.forEach((ref, i) =>
+          sr.reveal(ref, srConfig(i * 100))
+        );
+      });
+    }
   }, [featuredProjects, prefersReducedMotion]);
+
+  
 
   return (
     <section id="work" className="md:py-[100px] py-12 bg-white">
-       <div className="flex gap-2">
-       <h2 className="mb-5 flex-shrink-0">
-           <span className="text-2xl font-dosis">02.</span>
-           <span className="text-3xl font-medium"> Recent projects </span>
-         </h2>
+      <div className="flex gap-2 mb-8">
+        <h2 className=" flex-shrink-0">
+          <span className="text-2xl font-dosis">02.</span>
+          <span className="text-3xl font-medium"> Recent projects </span>
+        </h2>
         <div className="border-t flex-grow lg:flex-grow-0 w-72 border-black my-4"></div>
-       </div>
+      </div>
 
       <ul>
-
         {featuredProjects.map((project, i) => {
           const { external, title, tech, github, cover, html } = project;
 
@@ -84,11 +88,12 @@ const Project = () => {
               ref={(el) => {
                 revealProjects.current[i] = el;
               }}
-              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] hover: shadow-2xl ${
-                i % 2 !== 0 ? "md:flex-row-reverse flex" : ""
+              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] shadow-2xl ${
+                i % 2 !== 0 ? "md:flex-row-reverse " : ""
               } mb-24 md:mb-16 sm:mb-8`}
             >
-              <div className="relative col-span-12 row-span-full z-10 md:col-span-full md:p-5 p-2 rounded flex md:items-end flex-col">
+              <div className="relative col-span-6 col-start-1 row-span-full lg:col-span-8 lg:col-start-1 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 flex justify-end items-end">
+          
                 <p className="mb-2 text-[#F7D046] font-poppins text-sm">
                   Featured Project
                 </p>
@@ -100,7 +105,7 @@ const Project = () => {
                 </h3>
 
                 <div
-                  className="relative z-20 p-6 font-dosis text-light-slate text-lg rounded-md shadow-md bg-[#5b38e3] w-full"
+                  className="relative z-50 p-6 font-dosis text-light-slate text-lg rounded-md shadow-md bg-[#5b38e3]"
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
                 />
 
@@ -148,24 +153,24 @@ const Project = () => {
                 </div>
               </div>
 
-              <div className="relative hidden md:block z-10 col-start-6 col-end-auto row-span-full shadow-custom md:col-span-full md:h-full md:opacity-25">
+              <div className="relative hidden md:block z-10 col-span-6 col-start-auto row-span-full md:col-span-full md:row-span-full md:opacity-25 w-full h-full">
                 <Link
                   href={external ? external : github ? github : "#"}
-                  className="w-[50%] h-full bg-[#f7d046] rounded-custom align-middle block relative focus:outline-none focus:bg-transparent hover:bg-transparent group"
+                  className="block w-[50%] h-full bg-[#F7D046] rounded-lg align-middle hover:bg-transparent focus:bg-transparent focus:outline-none"
                 >
-                  <div className="absolute inset-0 z-30 transition-custom mix-blend-screen group-hover:bg-transparent"></div>
+                  <div className="absolute inset-0 z-30 transition mix-blend-screen"></div>
                   <img
                     src={cover}
                     alt={title}
-                    className="rounded-custom mix-blend-multiply filter grayscale contrast-100 brightness-90 md:object-cover md:w-auto md:h-full"
+                    className="rounded-lg mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 lg:object-cover lg:w-auto lg:h-full lg:filter-brightness-50"
                   />
                 </Link>
               </div>
             </li>
           );
         })}
-      </ul> 
-     </section>
+      </ul>
+    </section>
   );
 };
 

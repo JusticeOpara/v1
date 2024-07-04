@@ -1,6 +1,7 @@
-"use client";
+"use client"
 
-import React, { useState, useEffect, useRef, KeyboardEvent } from "react";
+
+import  { useState, useEffect, useRef, KeyboardEvent } from "react";
 import { CSSTransition } from "react-transition-group";
 import sr from "@/utils/sr";
 import srConfig from "@/utils/srConfig";
@@ -64,12 +65,18 @@ const Experience: React.FC = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    // if (typeof window !== "undefined" && !prefersReducedMotion) {
+    //   sr.reveal(revealContainer.current!, srConfig());
+    // }
+    const isClient = typeof window !== "undefined";
 
-    sr.reveal(revealContainer.current!, srConfig());
+    if (isClient && !prefersReducedMotion) {
+      import("@/utils/sr").then(({ default: sr }) => {
+        sr.reveal(revealContainer.current!, srConfig());
+      });
+    }
   }, [prefersReducedMotion]);
+
 
   const focusTab = () => {
     if (tabs.current[tabFocus!]) {
@@ -111,7 +118,7 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" ref={revealContainer} className="w-full mx-auto bg-red-300">
+    <section id="experience" ref={revealContainer} className="w-full mx-auto md:py-[100px] py-12">
      
       <div className="flex gap-2">
         <h2 className="mb-5 flex-shrink-0">
@@ -120,7 +127,7 @@ const Experience: React.FC = () => {
         </h2>
         <div className="lg:flex-grow-0 w-72 border-t border-black my-4"></div>
       </div>
-      <div className="flex flex-col md:flex-row mt-8">
+      <div className="flex flex-col md:flex-row mt-6">
        
         <div
           role="tablist"
@@ -141,11 +148,11 @@ const Experience: React.FC = () => {
               aria-selected={activeTabId === i}
               aria-controls={`panel-${i}`}
              
-              className={`flex items-center w-full h-12 px-4 mb-2 border-l-2 text-left whitespace-nowrap bg-red-500 ${
+              className={`flex items-center w-full h-12 px-4 mb-2 border-l-2 text-left whitespace-nowrap shadow text-[#202020] ${
                 activeTabId === i
-                  ? "border-[#5b38e3] text-[#5b38e3]"
-                  : "border-transparent text-[#202020]"
-              } focus:bg-light-navy hover:bg-light-navy`}
+                  ? "border-[#5b38e3]"
+                  : "border-transparent "
+              } focus:bg-[#5b38e3] hover:bg-[#5b38e3]`}
             >
               {job.company}
             </button>
@@ -158,7 +165,7 @@ const Experience: React.FC = () => {
           ></div>
         </div>
 
-        <div className="relative flex-grow mt-6 md:mt-0 md:ml-8">
+        <div className="relative flex-grow md:ml-8">
           {jobsData.map((job, i) => (
             <CSSTransition
               key={i}
@@ -175,7 +182,7 @@ const Experience: React.FC = () => {
                 hidden={activeTabId !== i}
                 className="p-4"
               >
-                <h3 className="text-xl font-medium">
+                <h3 className="text-xl font-medium mb-2">
                   <span>{job.title}</span>
                   <span className="text-[#5b38e3]">
                     &nbsp;@&nbsp;
@@ -185,7 +192,7 @@ const Experience: React.FC = () => {
                   </span>
                 </h3>
 
-                <p className="text-sm font-medium font-dosis">{job.range}</p>
+                <p className="text-base font-medium font-dosis mb-2">{job.range}</p>
 
                 <div className="w-96 font-poppins font-light text-[#202020]" dangerouslySetInnerHTML={{ __html: job.html }} />
               </div>
@@ -196,22 +203,5 @@ const Experience: React.FC = () => {
     </section>
   );
 };
-{/* <button
-key={i}
-isActive={activeTabId === i}
-onClick={() => setActiveTabId(i)}
-ref={(el) => (tabs.current[i] = el)}
-id={`tab-${i}`}
-role="tab"
-tabIndex={activeTabId === i ? 0 : -1}
-aria-selected={activeTabId === i}
-aria-controls={`panel-${i}`}
-className={`flex items-center w-full h-12 px-4 mb-2 border-l-2 text-left whitespace-nowrap bg-red-500 ${
-  activeTabId === i
-    ? "border-[#5b38e3] text-[#5b38e3]"
-    : "border-transparent text-[#202020]"
-} focus:bg-light-navy hover:bg-light-navy`}
->
-{job.company}
-</button> */}
-export default Experience;
+
+export default Experience

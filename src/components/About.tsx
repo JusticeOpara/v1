@@ -9,16 +9,29 @@ const About = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
 
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (typeof window === "undefined" || prefersReducedMotion) {
+  //     return;
+  //   }
 
-    sr.reveal(revealContainer.current, srConfig());
+  //   sr.reveal(revealContainer.current, srConfig());
+  // }, [prefersReducedMotion]);
+
+  useEffect(() => {
+    // if (typeof window !== "undefined" && !prefersReducedMotion) {
+    //   sr.reveal(revealContainer.current!, srConfig());
+    // }
+    const isClient = typeof window !== "undefined";
+
+    if (isClient && !prefersReducedMotion) {
+      import("@/utils/sr").then(({ default: sr }) => {
+        sr.reveal(revealContainer.current!, srConfig());
+      });
+    }
   }, [prefersReducedMotion]);
 
   const skills = [
-    "JavaScript (ES6+)",
+    "JavaScript",
     "TypeScript",
     "React",
     "Vue",
@@ -68,7 +81,7 @@ const About = () => {
             <ul className="grid grid-cols-2 md:grid-cols-4 list-none gap-4 text-center">
               {skills &&
                 skills.map((skill, i) => (
-                  <li key={i} className="relative mb-3 text-sm uppercase font-light py-2 flex justify-center items-center bg-[#5b38e3] rounded">
+                  <li key={i} className="relative mb-3 text-base uppercase py-2 flex justify-center items-center bg-[#5b38e3] rounded">
                     ✨{skill}
                   </li>
                 ))}

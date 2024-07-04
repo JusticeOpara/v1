@@ -14,12 +14,18 @@ const Contact = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    if (prefersReducedMotion) {
-      return;
-    }
+    // if (typeof window !== "undefined" && !prefersReducedMotion) {
+    //   sr.reveal(revealContainer.current!, srConfig());
+    // }
+    const isClient = typeof window !== "undefined";
 
-    sr.reveal(revealContainer.current, srConfig());
-  }, []);
+    if (isClient && !prefersReducedMotion) {
+      import("@/utils/sr").then(({ default: sr }) => {
+        sr.reveal(revealContainer.current!, srConfig());
+      });
+    }
+  }, [prefersReducedMotion]);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {

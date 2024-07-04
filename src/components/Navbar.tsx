@@ -11,21 +11,48 @@ type NavProps = {
 };
 
 const Navbar: React.FC<NavProps> = ({ isHero }) => {
+  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // const [isMounted, setIsMounted] = useState(!isHero);
+  // const [scrolledToTop, setScrolledToTop] = useState(true);
+  // const scrollDirection = useScrollDirection({ initialDirection: "down" });
+  // const prefersReducedMotion = usePrefersReducedMotion();
+
+
+  // const handleScroll = () => setScrolledToTop(window.pageYOffset < 50);
+  // const handleClick = () => setIsMenuOpen(!isMenuOpen);
+  // const wrapperRef = useRef<HTMLDivElement>(null);
+
+  // useOnClickOutside(wrapperRef, () => setIsMenuOpen(false));
+
+  // useEffect(() => {
+  //   if (typeof window == "undefined" || prefersReducedMotion) return;
+
+  //   const timeout = setTimeout(() => setIsMounted(true), 100);
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     clearTimeout(timeout);
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [prefersReducedMotion]);
+  
+
+  // const fadeClass = isHero ? "fade" : "";
+  // const fadeDownClass = isHero ? "fadedown" : "";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMounted, setIsMounted] = useState(!isHero);
   const [scrolledToTop, setScrolledToTop] = useState(true);
   const scrollDirection = useScrollDirection({ initialDirection: "down" });
   const prefersReducedMotion = usePrefersReducedMotion();
-  // const loaderDelay = 2000;
-
-  const handleScroll = () => setScrolledToTop(window.pageYOffset < 50);
-  const handleClick = () => setIsMenuOpen(!isMenuOpen);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   useOnClickOutside(wrapperRef, () => setIsMenuOpen(false));
 
+  const handleScroll = () => setScrolledToTop(window.pageYOffset < 50);
+  const handleClick = () => setIsMenuOpen(!isMenuOpen);
+
   useEffect(() => {
-    if (typeof window == "undefined" || prefersReducedMotion) return;
+    if (typeof window === "undefined" || prefersReducedMotion) return;
 
     const timeout = setTimeout(() => setIsMounted(true), 100);
     window.addEventListener("scroll", handleScroll);
@@ -35,18 +62,10 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prefersReducedMotion]);
-  // useEffect(() => {
-  //   if (typeof window === 'undefined' || prefersReducedMotion) return;
-  
-  //   window.addEventListener("scroll", handleScroll);
-  
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [prefersReducedMotion]);
 
   const fadeClass = isHero ? "fade" : "";
   const fadeDownClass = isHero ? "fadedown" : "";
+
 
   return (
     <header
