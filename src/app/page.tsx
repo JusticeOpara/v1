@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <>
      <Navbar  isHero={true}/> 
-    <main className="h-full w-full 2xl:px-[200px] lg:px-[150px] mx-auto px-12">
+    <main className="h-full w-full 2xl:px-[200px] lg:px-[150px] mx-auto px-12 mt-4 md:mt-0">
       <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
-        <h1 className="font-bold text-5xl">Hi,</h1>
+        <h1 className="font-bold md:text-5xl text-4xl ">Hi,</h1>
 
-        <h2 className="font-bold text-5xl ">I am <span className="text-[#5b38e3]"> Justin Opara</span></h2>
-        <h2 className="font-bold text-5xl">
+        <h2 className="font-bold md:text-5xl text-3xl">I am <span className="text-[#5b38e3]"> Justice Opara</span> </h2>
+        <h2 className="font-bold md:text-5xl text-3xl">
           I build things for the web.
         </h2>
         <p className="font-poppin font-light max-w-[600px] lg:text-lg text-base">
@@ -38,10 +38,12 @@ export default function Home() {
             </Link>
           </p>
       </div>
-     <Experience/> 
+     
 
-       <About/>  
-       <Project/>   
+       <About/> 
+       <Experience/> 
+        <Project/>    
+    
       <Contact/>  
        
     </main>

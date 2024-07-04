@@ -3,7 +3,6 @@
 
 import  { useState, useEffect, useRef, KeyboardEvent } from "react";
 import { CSSTransition } from "react-transition-group";
-import sr from "@/utils/sr";
 import srConfig from "@/utils/srConfig";
 import { KEY_CODES } from "@/utils";
 import { usePrefersReducedMotion } from "@/hooks";
@@ -148,11 +147,11 @@ const Experience: React.FC = () => {
               aria-selected={activeTabId === i}
               aria-controls={`panel-${i}`}
              
-              className={`flex items-center w-full h-12 px-4 mb-2 border-l-2 text-left whitespace-nowrap shadow text-[#202020] ${
+              className={`flex items-center w-full h-12 md:px-4 px-2 mb-2 border-l-2 text-left whitespace-nowrap shadow text-[#202020] ${
                 activeTabId === i
                   ? "border-[#5b38e3]"
                   : "border-transparent "
-              } focus:bg-[#5b38e3] hover:bg-[#5b38e3]`}
+              }  hover:bg-[#5b38e3]`}
             >
               {job.company}
             </button>
@@ -194,7 +193,7 @@ const Experience: React.FC = () => {
 
                 <p className="text-base font-medium font-dosis mb-2">{job.range}</p>
 
-                <div className="w-96 font-poppins font-light text-[#202020]" dangerouslySetInnerHTML={{ __html: job.html }} />
+                <div className="md:w-96 w-full font-poppins font-light text-[#202020]" dangerouslySetInnerHTML={{ __html: job.html }} />
               </div>
             </CSSTransition>
           ))}

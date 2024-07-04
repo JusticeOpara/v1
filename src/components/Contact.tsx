@@ -3,7 +3,6 @@
 import srConfig from "@/utils/srConfig";
 import { usePrefersReducedMotion } from "@/hooks";
 import React, { useEffect, useState, useRef } from "react";
-import sr from "@/utils/sr";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
@@ -62,7 +61,7 @@ const Contact = () => {
 
   return (
     <section
-      className="w-full h-full md:pt-[100px] pt-12 bg-slate-200"
+      className="w-full h-full md:pt-[100px] pt-12"
       ref={revealContainer}
       id="contact"
     >

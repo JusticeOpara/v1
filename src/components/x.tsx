@@ -76,22 +76,21 @@ const Project = () => {
         <div className="border-t flex-grow lg:flex-grow-0 w-72 border-black my-4"></div>
       </div>
 
-       <ul className=""> 
+      <ul className="block">
         {featuredProjects.map((project, i) => {
           const { external, title, tech, github, cover, html } = project;
 
           return (
-           
             <li
               key={i}
               ref={(el) => {
                 revealProjects.current[i] = el;
               }}
-              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] shadow-2xl bg-slate-400 ${
+              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] shadow-2xl ${
                 i % 2 !== 0 ? "md:flex-row-reverse " : ""
               } mb-24 md:mb-16 sm:mb-8`}
             >
-              <div className="relative col-span-6 col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10  items-end">
+              <div className="relative col-span-6 col-start-1 row-span-full lg:col-span-8 lg:col-start-1 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 flex justify-end items-end">
           
                 <p className="mb-2 text-[#F7D046] font-poppins text-sm">
                   Featured Project
@@ -152,28 +151,26 @@ const Project = () => {
                 </div>
               </div>
 
-              <div className="relative hidden md:block col-span-6 col-start-auto row-span-full md:col-span-full md:row-span-full w-full h-full">
+              <div className="relative hidden md:block zh-10 col-span-6 col-start-auto row-span-full md:col-span-full md:row-span-full md:opacity-25 w-full h-full">
                 <Link
                   href={external ? external : github ? github : "#"}
-                  className="block w-[50%] h-full hbg-[#F7D046] rounded-lg align-middle hover:bg-transparent focus:bg-transparent focus:outline-none"
+                  className="block w-[50%] h-full bg-[#F7D046] rounded-lg align-middle hover:bg-transparent focus:bg-transparent focus:outline-none"
                 >
                   <div className="absolute inset-0 z-30 transition mix-blend-screen"></div>
                   <img
                     src={cover}
                     alt={title}
-                    className="rounded-lg h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 lg:object-cover lg:w-auto lg:h-full lg:filter-brightness-50"
+                    className="rounded-lg mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 lg:object-cover lg:w-auto lg:h-full lg:filter-brightness-50"
                   />
                 </Link>
               </div>
               
             </li>
-          
           );
         })}
-       </ul> 
+      </ul>
     </section>
   );
 };
 
-export default Project;
-
+export default Pro
