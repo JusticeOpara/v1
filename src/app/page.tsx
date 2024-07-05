@@ -1,8 +1,10 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Email from "@/components/Email";
 import Experience from "@/components/Experience";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
+import Social from "@/components/Socials";
 import Link from "next/link";
 
 
@@ -10,7 +12,9 @@ export default function Home() {
   return (
     <>
      <Navbar  isHero={true}/> 
-    <main className="h-full w-full 2xl:px-[200px] lg:px-[150px] mx-auto px-12 mt-4 md:mt-0">
+     <Social/>
+     {/* <Email/> */}
+    <main className="h-full w-full 2xl:px-[300px] bg-slate lg:px-[200px] mx-auto px-12 mt-4 md:mt-0">
       <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
         <h1 className="font-bold md:text-5xl text-4xl lg:text-7xl ">Hi,</h1>
 

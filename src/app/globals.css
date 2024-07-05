@@ -6,6 +6,14 @@
 
 :root {
 }
+.writing-mode-vertical-rl {
+  writing-mode: vertical-rl;
+}
+.texto {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
 .fadeup-enter {
     opacity: 0.01;
     transform: translateY(20px);

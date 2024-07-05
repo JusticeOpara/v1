@@ -6,6 +6,7 @@ import React, { useEffect, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
+import Link from "next/link";
 
 const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
@@ -93,7 +94,7 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col w-full  bg-slate-400 font-poppins "
+          className="flex flex-col w-full  bg-slate-400 font-poppins"
         >
           <input
             className="mb-4 outline-none py-3 border px-2 text-[#202020] placeholder:text-[#202020] rounded border-black outline-0"
@@ -122,7 +123,7 @@ const Contact = () => {
             className="mb-4  py-3 px-2 rounded border border-black h-[120px] outline-0 text-[#202020] placeholder:text-[#202020]"
             required
           ></textarea>
-          
+
           <button
             className="bg-transparent hover:border-r-4 hover:border-b-4 rounded border-2 border-[#5b38e3] px-4 py-2 md:w-36 items-center
             hover:translate-x-[-5px] hover:translate-y-[-4px] focus-visible:translate-x-[-5px] focus-visible:translate-y-[-4px]"
@@ -141,45 +142,21 @@ const Contact = () => {
           </button>
         </form>
       </div>
-      <hr className="my-3" />
-      <div className="border-t flex-grow-0 border-black my-3"></div>
+
+      <div className="border-t flex-grow-0 border-black mt-5"></div>
       <ToastContainer />
 
-      <div className="font-dosis font-medium flex justify-center">
-        Designed and built by Justice Opara
+      <div className="font-dosis font-medium flex justify-between items-center py-4">
+        <div>
+          <Link href="/">
+            <h1 className="font-bold text-2xl text-[#5b38e3]">JO</h1>
+          </Link>
+        </div>
+
+        <div className="font-poppins text-sm font-light">@{(new Date().getFullYear())}. All right reserved</div>
       </div>
     </section>
   );
 };
+
 export default Contact;
-
-// const Contact = () => {
-//   const revealContainer = useRef(null);
-//   const prefersReducedMotion = usePrefersReducedMotion();
-
-//   useEffect(() => {
-//     if (prefersReducedMotion) {
-//       return;
-//     }
-
-//     sr.reveal(revealContainer.current, srConfig());
-//   }, []);
-
-//   return (
-//     <StyledContactSection id="contact" ref={revealContainer}>
-//       <h2 className="numbered-heading overline">What’s Next?</h2>
-
-//       <h2 className="font-poppins">Get In Touch</h2>
-
-//       <p>
-//       I can help you design, improve or build the product experience for your new or existing products. Feel free to get in touch with me
-//       </p>
-
-//       <a className="email-link" href={`mailto:justiceopara33@gmail.com`}>
-//         Say Hello
-//       </a>
-//     </StyledContactSection>
-//   );
-// };
-
-// export default Contact;

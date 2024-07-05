@@ -67,7 +67,7 @@ const Project = () => {
   
 
   return (
-    <section id="work" className="md:py-[100px] py-12 bg-white">
+    <section id="work" className="md:py-[100px] pt-12 bg-white">
       <div className="flex gap-2 mb-8">
         <h2 className=" flex-shrink-0">
           <span className="text-2xl font-dosis">02.</span>
@@ -89,9 +89,9 @@ const Project = () => {
               }}
               className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] ${
                 i % 2 !== 0 ? "" : ""
-              } mb-24 md:mb-16 sm:mb-8`}
+              } mb-12 md:mb-16 sm:mb-8`}
             >
-              <div className="relative col-span-6 col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 items-end">
+              <div className="relative   col-span-full col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 items-end">
           
                 <p className="mb-2 text-[#F7D046] font-poppins text-sm">
                   Featured Project
@@ -155,13 +155,13 @@ const Project = () => {
               <div className="relative hidden md:block col-span-6 col-start-auto row-span-full md:col-span-full md:row-span-full w-full h-full">
                 <Link
                   href={external ? external : github ? github : "#"}
-                  className="block w-[50%] h-full hbg-[#F7D046] rounded-lg align-middle hover:bg-transparent focus:bg-transparent focus:outline-none"
+                  className="block w-[50%] h-full rounded align-middle"
                 >
-                  <div className="absolute inset-0 z-30 transition mix-blend-screen"></div>
+                  {/* <div className="absolute inset-0 z-30 transition mix-blend-screen"></div> */}
                   <img
                     src={cover}
                     alt={title}
-                    className="rounded-lg h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 object-fill w-auto h-full filter-brightness-50"
+                    className="rounded-md h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 object-fill w-auto h-full filter-brightness-50"
                   />
                 </Link>
               </div>

@@ -117,7 +117,7 @@ const Experience: React.FC = () => {
   };
 
   return (
-    <section id="experience" ref={revealContainer} className="w-full mx-auto md:py-[100px] py-12 grid place-items-center">
+    <section id="experience" ref={revealContainer} className="w-full mx-auto md:py-[100px] py-12 md:grid place-items-center">
      
       <div className="flex gap-2">
         <h2 className="mb-5 flex-shrink-0">
