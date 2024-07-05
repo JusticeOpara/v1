@@ -173,4 +173,3 @@ const Project = () => {
   );
 };
 
-export default Pro

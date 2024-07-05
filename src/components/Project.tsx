@@ -24,7 +24,7 @@ const dummyData: ProjectData[] = [
     title: "Cyptocere",
     tech: ["React", "JavaScript", "TailwindCSS", "Firebase"],
     github: "https://github.com/JusticeOpara",
-    cover: "/screenshot02.png",
+    cover: "/screenshot03.png",
     html: `<p>Developed an app for fundamental analysis of the digital currency market, 
       including tracking price, volume, and market capitalization.</p>`,
   },
@@ -71,7 +71,7 @@ const Project = () => {
       <div className="flex gap-2 mb-8">
         <h2 className=" flex-shrink-0">
           <span className="text-2xl font-dosis">02.</span>
-          <span className="text-3xl font-medium"> Recent projects </span>
+          <span className="text-3xl font-medium"> Personal projects </span>
         </h2>
         <div className="border-t flex-grow lg:flex-grow-0 w-72 border-black my-4"></div>
       </div>
@@ -87,11 +87,11 @@ const Project = () => {
               ref={(el) => {
                 revealProjects.current[i] = el;
               }}
-              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] shadow-2xl bg-slate-400 ${
-                i % 2 !== 0 ? "md:flex-row-reverse " : ""
+              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] ${
+                i % 2 !== 0 ? "" : ""
               } mb-24 md:mb-16 sm:mb-8`}
             >
-              <div className="relative col-span-6 col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10  items-end">
+              <div className="relative col-span-6 col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 items-end">
           
                 <p className="mb-2 text-[#F7D046] font-poppins text-sm">
                   Featured Project
@@ -104,7 +104,7 @@ const Project = () => {
                 </h3>
 
                 <div
-                  className="relative z-50 p-6 font-dosis text-light-slate text-lg rounded-md shadow-md bg-[#5b38e3]"
+                  className="relative z-50 p-6 font-dosis text-light-slate text-lg rounded-md shadow-md text-gray-200 bg-[#5b38e3]"
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
                 />
 
@@ -161,7 +161,7 @@ const Project = () => {
                   <img
                     src={cover}
                     alt={title}
-                    className="rounded-lg h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 lg:object-cover lg:w-auto lg:h-full lg:filter-brightness-50"
+                    className="rounded-lg h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 object-fill w-auto h-full filter-brightness-50"
                   />
                 </Link>
               </div>

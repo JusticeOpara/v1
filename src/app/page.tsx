@@ -12,10 +12,10 @@ export default function Home() {
      <Navbar  isHero={true}/> 
     <main className="h-full w-full 2xl:px-[200px] lg:px-[150px] mx-auto px-12 mt-4 md:mt-0">
       <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
-        <h1 className="font-bold md:text-5xl text-4xl ">Hi,</h1>
+        <h1 className="font-bold md:text-5xl text-4xl lg:text-7xl ">Hi,</h1>
 
-        <h2 className="font-bold md:text-5xl text-3xl">I am <span className="text-[#5b38e3]"> Justice Opara</span> </h2>
-        <h2 className="font-bold md:text-5xl text-3xl">
+        <h2 className="font-bold md:text-5xl text-3xl lg:text-7xl">I am <span className="text-[#5b38e3]"> Justice Opara</span> </h2>
+        <h2 className="font-bold md:text-5xl text-3xl lg:text-7xl">
           I build things for the web.
         </h2>
         <p className="font-poppin font-light max-w-[600px] lg:text-lg text-base">

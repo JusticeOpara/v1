@@ -75,13 +75,13 @@ const About = () => {
           </div>
 
           <div className="mt-5">
-            <p className="font-light">
+            <p className="font-light mb-2 text-lg">
               Here are a few technologies I’ve been working with recently:
             </p>
             <ul className="grid grid-cols-2 md:grid-cols-4 list-none gap-4 text-center">
               {skills &&
                 skills.map((skill, i) => (
-                  <li key={i} className="relative mb-3 text-base uppercase py-2 flex justify-center items-center bg-[#5b38e3] rounded">
+                  <li key={i} className="relative mb-3 text-base font-medium uppercase py-2 flex justify-center items-center bg-[#5b38e3] rounded">
                     ✨{skill}
                   </li>
                 ))}

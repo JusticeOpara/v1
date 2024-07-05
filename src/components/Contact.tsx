@@ -93,24 +93,24 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={sendEmail}
-          className="flex flex-col w-full  bg-slate-400 font-poppins"
+          className="flex flex-col w-full  bg-slate-400 font-poppins "
         >
           <input
-            className="mb-4 outline-none py-3 px-2 text-[#202020] placeholder:text-[#202020] rounded outline-0"
+            className="mb-4 outline-none py-3 border px-2 text-[#202020] placeholder:text-[#202020] rounded border-black outline-0"
             type="text"
             placeholder="FullName"
             name="user_name"
             required
           />
           <input
-            className="mb-4 py-3 px-2 rounded outline-0 text-[#202020] placeholder:text-[#202020]"
+            className="mb-4 py-3 px-2 border border-black rounded outline-0 text-[#202020] placeholder:text-[#202020]"
             type="email"
             placeholder="Email"
             required
             name="user_email"
           />
           <input
-            className="mb-4 py-3 px-2 rounded outline-0 text-[#202020] placeholder:text-[#202020]"
+            className="mb-4 py-3 px-2 border-black border rounded outline-0 text-[#202020] placeholder:text-[#202020]"
             type="text"
             placeholder="Subject"
             required
@@ -119,11 +119,12 @@ const Contact = () => {
           <textarea
             name="message"
             placeholder="Message"
-            className="mb-4  py-3 px-2 rounded  h-[120px] outline-0 text-[#202020] placeholder:text-[#202020]"
+            className="mb-4  py-3 px-2 rounded border border-black h-[120px] outline-0 text-[#202020] placeholder:text-[#202020]"
             required
           ></textarea>
+          
           <button
-            className="bg-transparent hover:border-r-4 hover:border-b-4 rounded border-2 border-[#5b38e3] px-4 py-2 shadow-2xl 
+            className="bg-transparent hover:border-r-4 hover:border-b-4 rounded border-2 border-[#5b38e3] px-4 py-2 md:w-36 items-center
             hover:translate-x-[-5px] hover:translate-y-[-4px] focus-visible:translate-x-[-5px] focus-visible:translate-y-[-4px]"
             type="submit"
             disabled={isLoading}
