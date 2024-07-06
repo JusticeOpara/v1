@@ -22,8 +22,8 @@ const dummyData: ProjectData[] = [
   {
     external: "https://cyptocurrency.netlify.app/",
     title: "Cyptocere",
-    tech: ["React", "JavaScript", "TailwindCSS", "Firebase"],
-    github: "https://github.com/JusticeOpara",
+    tech: ["React", "JavaScript", "TailwindCSS", "Firebase","Redux"],
+    github: "https://github.com/JusticeOpara/cryptocere",
     cover: "/screenshot03.png",
     html: `<p>Developed an app for fundamental analysis of the digital currency market, 
       including tracking price, volume, and market capitalization.</p>`,
@@ -32,7 +32,7 @@ const dummyData: ProjectData[] = [
     external: "https://nft-bazzar.netlify.app/",
     title: "Nft Bazzar",
     tech: ["Framer Motion", "Tailwind CSS", "TypeScript", "ReactJS"],
-    github: "https://github.com/JusticeOpara",
+    github: "https://github.com/JusticeOpara/nft-bazaar",
     cover: "/screenshot.png",
     html: `<p> NFT Bazaar is an elegantly designed and fully responsive NFT marketplace website. 
       It serves as a vibrant representation of a cutting-edge Web3 marketplace, 

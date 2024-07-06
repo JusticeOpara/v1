@@ -20,36 +20,32 @@ interface Job {
 const dummyJobsData: Job[] = [
   {
     title: "Software Engineer",
-    company: "Company A",
+    company: "Scelloo",
     location: "Location A",
     range: "Jan 2020 - Present",
-    url: "https://companya.com",
-    html: `<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-    Accusamus similique cupiditate neque, aut eius nemo possimus! Laboriosam optio perspiciatis fugiat.</p>`,
+    url: "http://www.cloudenly.com",
+    html: `<p>➤ Engineered comprehensive test routines and schedules that closely mirror external interfaces across diverse browsers and devices, resulting in a 93% reduction in post-deployment issues.</p>
+    <p>➤ Collaborated with the Quality Assurance team to establish and execute thorough test plans, contributing to a 90% improvement in overall product quality.</p>
+    <p>➤ ⁠Leveraged modern frontend technologies, such as Vue.js, TailwindCSS, Vuex, and JavaScript, to deliver robust user interfaces and feature updates.</p>`,
   },
   {
     title: "Frontend Developer",
-    company: "Company B",
-    location: "Location B",
-    range: "Feb 2018 - Dec 2019",
+    company: "BleauTech",
+    location: "Nigeria (Remote)",
+    range: "November 2023 – present",
     url: "https://companyb.com",
-    html: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Temporibus earum praesentium porro fugiat autem, commodi facilis
-    dolore nemo non natus error vitae. Quidem, consequuntur, officia
-    qui ad sunt deleniti maiores incidunt, illum quaerat velit
-    aspernatur magnam atque eligendi minus fuga.</p>`,
+    html: `<p>➤ Developed responsive web pages/components and user-friendly interfaces using HTML, CSS, JavaScript, and ReactJS.</p>
+    <p>➤ Implemented secure authentication functionality, streamlined data management, and enhanced API communication.</p>
+    <p>➤  Developed and integrated a payment feature into the app, utilizing the provided payment endpoint from the backend.</p>`,
   },
   {
     title: "Intern",
-    company: "Startup Inc.",
-    location: "Austin, TX",
+    company: "Rock&Art",
+    location: "United Kingdom (Remote)",
     range: "Jan 2017 - May 2018",
-    url: "https://startupinc.com",
-    html: `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    Temporibus earum praesentium porro fugiat autem, commodi facilis
-    dolore nemo non natus error vitae. Quidem, consequuntur, officia
-    qui ad sunt deleniti maiores incidunt, illum quaerat velit
-    aspernatur magnam atque eligendi minus fuga.</p>`,
+    url: "https://www.rockandart.org/",
+    html: `<p>.My primary responsibility is building and managing websites with a team of Creative developers. Using
+    technologies such as React, Redux, and MUI.</p>`,
   },
   // Add more dummy jobs data as needed
 ];
@@ -193,7 +189,7 @@ const Experience: React.FC = () => {
 
                 <p className="text-base font-medium font-dosis mb-2">{job.range}</p>
 
-                <div className="md:w-96 w-full font-poppins font-light text-[#202020]" dangerouslySetInnerHTML={{ __html: job.html }} />
+                <div className="md:w-96 w-full font-poppins text-sm font-light text-[#202020]" dangerouslySetInnerHTML={{ __html: job.html }} />
               </div>
             </CSSTransition>
           ))}

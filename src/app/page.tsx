@@ -1,6 +1,5 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Email from "@/components/Email";
 import Experience from "@/components/Experience";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
@@ -13,13 +12,13 @@ export default function Home() {
     <>
      <Navbar  isHero={true}/> 
      <Social/>
-     {/* <Email/> */}
-    <main className="h-full w-full 2xl:px-[300px] bg-slate lg:px-[200px] mx-auto px-12 mt-4 md:mt-0">
+   
+    <main className="h-full w-full 2xl:px-[300px] md:px-[100px] lg:px-[200px] mx-auto px-12 mt-4 md:mt-0">
       <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
-        <h1 className="font-bold md:text-5xl text-4xl lg:text-7xl ">Hi,</h1>
+        <h1 className="font-bold md:text-6xl text-4xl lg:text-7xl ">Hi,</h1>
 
-        <h2 className="font-bold md:text-5xl text-3xl lg:text-7xl">I am <span className="text-[#5b38e3]"> Justice Opara</span> </h2>
-        <h2 className="font-bold md:text-5xl text-3xl lg:text-7xl">
+        <h2 className="font-bold md:text-6xl text-3xl lg:text-7xl">I am <span className="text-[#5b38e3]"> Justice Opara</span> </h2>
+        <h2 className="font-bold md:text-6xl text-3xl lg:text-7xl">
           I build things for the web.
         </h2>
         <p className="font-poppin font-light max-w-[600px] lg:text-lg text-base">
@@ -35,7 +34,7 @@ export default function Home() {
           >
             <Link
               className="font-medium text-lg cursor-pointer text-[#5b38e3]"
-              href="mailto:justiceopara33@gmail.com"
+              href="#contact"
               target="_blank"
             >
               Get in touch

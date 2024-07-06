@@ -15,7 +15,7 @@ const socialMedia: MediaData[] = [
   {
     name: "github",
     icon: "/github.svg",
-    url: "https://github.com/",
+    url: "https://github.com/JusticeOpara",
   },
   {
     name: "Instagram",
@@ -25,17 +25,17 @@ const socialMedia: MediaData[] = [
   {
     name: "X",
     icon: "/twitter.svg",
-    url: "https://twitter.com/",
+    url: "https://x.com/JustAtom4",
   },
   {
     name: "Linkedin",
     icon: "linkedin.svg",
-    url: "https://www.linkedin.com/in/",
+    url: "https://www.linkedin.com/in/justice-opara-5b0474234/",
   },
   {
     name: "Phone",
     icon: "/phone.svg",
-    url: "07043434530",
+    url: "tel:07043434530",
   },
 ];
 
@@ -52,7 +52,7 @@ const Socials: React.FC<SocialProps> = ({ isHero }) => (
               rel="noreferrer"
               className="p-2 hover:translate-y-[-3px] focus:translate-y-[-3px] transition-transform"
             >
-              <Image src={icon} width={23} height={23} alt={name} className="hover:translate-y-[-5px] focus:translate-y-[-5px] transition-transform" />
+              <Image src={icon} width={24} height={24} alt={name} className="hover:translate-y-[-5px] focus:translate-y-[-5px] transition-transform" />
             </Link>
           </li>
         ))}
