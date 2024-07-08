@@ -54,14 +54,14 @@ const About = () => {
               digital products that others can see and use. My journey in tech
               has been quite interesting. From knowing nothing about the field
               to gaining substantial experience as a self-taught frontend
-              developer, I've built numerous personal projects that have helped
+              developer, I&#39;ve built numerous personal projects that have helped
               me grow and understand web development concepts deeply.
             </p>
 
             <p className="text-base font-light">
               I am passionate about creating seamless user experiences and
               continuously learning new technologies to improve my craft. When
-              I'm not coding, you can find me on the court playing basketball.
+              &#39;m not coding, you can find me on the court playing basketball.
             </p>
           </div>
 
