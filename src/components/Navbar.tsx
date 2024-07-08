@@ -48,7 +48,7 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
 
   return (
     <header
-      className={`fixed top-0 z-50 h-[70px] w-full bg-white px-16 bg-opacity-85 backdrop-blur transition-shadow duration-300 flex items-center ${
+      className={`fixed top-0 z-50 h-[70px] w-full bg-white md:px-16 px-12 bg-opacity-85 backdrop-blur transition-shadow duration-300 flex items-center ${
         scrollDirection === "up" && !scrolledToTop
           ? "shadow-lg translate-y-0"
           : scrollDirection === "down" && !scrolledToTop
