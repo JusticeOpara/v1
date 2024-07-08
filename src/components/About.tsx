@@ -2,20 +2,11 @@
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { usePrefersReducedMotion } from "@/hooks";
-import sr from "@/utils/sr";
 import srConfig from "@/utils/srConfig";
 
 const About = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
-
-  // useEffect(() => {
-  //   if (typeof window === "undefined" || prefersReducedMotion) {
-  //     return;
-  //   }
-
-  //   sr.reveal(revealContainer.current, srConfig());
-  // }, [prefersReducedMotion]);
 
   useEffect(() => {
     // if (typeof window !== "undefined" && !prefersReducedMotion) {
@@ -58,32 +49,33 @@ const About = () => {
       <div className="flex justify-between flex-col md:flex-row gap-12">
         <div className="md:w-[700px]">
           <div className="flex flex-col gap-4">
-            <p className="lg:text-lg text-base font-light">
-              I am a professional frontend developer passionate about
-              translating visions into interactive web experiences. With
-              expertise in HTML, CSS, and modern JavaScript frameworks, i am
-              committed to building pixel-perfect, responsive websites that
-              captivate users. My track record? Well, it is filled with numerous
-              successful projects and achievements that i am really proud of.
+            <p className="text-base font-light">
+              Hello, my name is Justice Opara. I find great joy in creating
+              digital products that others can see and use. My journey in tech
+              has been quite interesting. From knowing nothing about the field
+              to gaining substantial experience as a self-taught frontend
+              developer, I've built numerous personal projects that have helped
+              me grow and understand web development concepts deeply.
             </p>
 
-            <p className="lg:text-lg text-base font-light">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus earum praesentium porro fugiat autem, commodi facilis
-              dolore nemo non natus error vitae. Quidem, consequuntur, officia
-              qui ad sunt deleniti maiores incidunt, illum quaerat velit
-              aspernatur magnam atque eligendi minus fuga?
+            <p className="text-base font-light">
+              I am passionate about creating seamless user experiences and
+              continuously learning new technologies to improve my craft. When
+              I'm not coding, you can find me on the court playing basketball.
             </p>
           </div>
 
           <div className="mt-5">
-            <p className="font-light mb-2 text-lg">
+            <p className="font-normal mb-2 text-lg">
               Here are a few technologies I’ve been working with recently:
             </p>
             <ul className="grid grid-cols-2 md:grid-cols-3 list-none gap-4 text-center">
               {skills &&
                 skills.map((skill, i) => (
-                  <li key={i} className="relative mb-3 text-base font-medium uppercase py-2 flex justify-center items-center bg-[#5b38e3] rounded">
+                  <li
+                    key={i}
+                    className="relative mb-3 text-base font-medium uppercase py-2 flex justify-center items-center bg-[#5b38e3] rounded"
+                  >
                     ✨{skill}
                   </li>
                 ))}

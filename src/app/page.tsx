@@ -13,7 +13,7 @@ export default function Home() {
      <Navbar  isHero={true}/> 
      <Social/>
    
-    <main className="h-full w-full 2xl:px-[300px] md:px-[100px] lg:px-[200px] mx-auto px-12 mt-4 md:mt-0">
+    <main className="h-full w-full 2xl:px-80 lg:px-[200px] md:px-[100px] lg:bg-red-300 2xl:bg-white mx-auto px-12 mt-4 md:mt-0">
       <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
         <h1 className="font-bold md:text-6xl text-4xl lg:text-7xl ">Hi,</h1>
 
@@ -22,10 +22,7 @@ export default function Home() {
           I build things for the web.
         </h2>
         <p className="font-poppin font-light max-w-[600px] lg:text-lg text-base">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error mollitia quasi minus, 
-        eos reiciendis maiores repudiandae optio excepturi totam quidem ratione in blanditiis voluptas vero velit non deleniti! 
-        Rerum cumque voluptates ipsa corrupti enim nesciunt deserunt praesentium, similique, 
-        odit perferendis maiores id laboriosam! Quibusdam doloremque vero deserunt molestiae et pariatur?
+        I am a self-taught Software Engineer that crafts things for the Web, heavy focused on front-end development, enthusiastic and fascinated on user interfaces.
         </p>
      
 

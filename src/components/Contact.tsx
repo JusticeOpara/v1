@@ -107,7 +107,7 @@ const Contact = () => {
       </div>
 
       <div className="flex w-full lg:gap-36 gap-24 md:flex-row flex-col">
-        <div className="font-light lg:text-lg text-base font-poppins w-full">
+        <div className="font-light text-base font-poppins w-full">
           <p className="mb-1">
             Let&apos;s have a conversation about how I can turn your visions
             into captivating online realities. Feel free to reach out to me via{" "}
