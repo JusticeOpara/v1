@@ -25,8 +25,11 @@ const dummyData: ProjectData[] = [
     tech: ["React", "JavaScript", "TailwindCSS", "Firebase","Redux"],
     github: "https://github.com/JusticeOpara/cryptocere",
     cover: "/screenshot03.png",
-    html: `<p>Developed an app for fundamental analysis of the digital currency market, 
-      including tracking price, volume, and market capitalization.</p>`,
+    html: `<p>Developed a comprehensive application for analyzing the digital currency market, 
+    focusing on key metrics like price, volume, and market capitalization.
+     Made it user-friendly using the CoinGecko API to retrieve and display cryptocurrencies,
+      allowing users to favorite coins. Implemented secure authentication with Firebase for smooth login and sign-up processes. 
+    Managed state efficiently with the Context API to enhance performance and user experience.</p>`,
   },
   {
     external: "https://nft-bazzar.netlify.app/",
@@ -34,9 +37,10 @@ const dummyData: ProjectData[] = [
     tech: ["Framer Motion", "Tailwind CSS", "TypeScript", "ReactJS"],
     github: "https://github.com/JusticeOpara/nft-bazaar",
     cover: "/screenshot.png",
-    html: `<p> NFT Bazaar is an elegantly designed and fully responsive NFT marketplace website. 
-      It serves as a vibrant representation of a cutting-edge Web3 marketplace, 
-      empowering users to seamlessly create, and collect NFTs.</p>`,
+    html: `<p>Designed and developed an innovative Digital NFT marketplace named NFT Bazaar. 
+    This platform is a fully responsive, elegantly designed website that represents the forefront of Web3 technology.
+     It empowers users to create and collect NFTs effortlessly. Key features of NFT Bazaar includes: a visually appealing and user-friendly interface, a 'like' feature allowing users to express appreciation and engage with NFTs.
+    To build this platform, I utilized industry-leading technologies such as ReactJS, Tailwind CSS, Framer Motion, and TypeScript, ensuring a smooth and dynamic user experience. The combination of these technologies allows NFT Bazaar to deliver a vibrant and interactive marketplace for digital art and collectibles.</p>`,
   },
 ];
 
