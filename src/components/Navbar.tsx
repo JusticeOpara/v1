@@ -48,7 +48,7 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
 
   return (
     <header
-      className={`fixed top-0 z-50 h-[70px] w-full md:px-16 px-8 bg-opacity-85 backdrop-blur transition-shadow duration-300 flex items-center ${
+      className={`fixed top-0 z-50 h-[70px] w-full md:px-16 pr-8 bg-opacity-85 backdrop-blur transition-shadow duration-300 flex items-center ${
         scrollDirection === "up" && !scrolledToTop
           ? "shadow-lg translate-y-0"
           : scrollDirection === "down" && !scrolledToTop
@@ -61,7 +61,7 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
           <TransitionGroup component={null}>
             {isMounted && (
               <CSSTransition classNames={fadeClass} timeout={timeout}>
-                <div className="w-10 md:w-24  items-center flex bdg-[#5b38e3] rounded-full justify-start">
+                <div className="w-24  items-center flex justify-start">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -135,7 +135,7 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
               {isMounted && (
                 <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                   <Link
-                    href="/resume.pdf"
+                    href="https://drive.google.com/file/d/1VQig2YtgsmbUd3Oh5oP8-OCBJi-1HXgE/view?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -187,15 +187,28 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
                   classNames={fadeDownClass}
                   timeout={timeout}
                 >
-                  <li key={index} className="bg-white">
+                  <li key={index} className="bg-white font-medium text-lg">
                     <Link href={`#${item.toLowerCase()}`}>
                       <span className="text-[#5b38e3]">{`0${index + 1}.`}</span>
                       <span>{item}</span>
                     </Link>
+                   
                   </li>
+                 
                 </CSSTransition>
               ))}
             </TransitionGroup>
+            <button className="bg-transparent rounded border-2 border-[#5b38e3]  px-4 py-2">
+            <Link
+                    href="https://drive.google.com/file/d/1VQig2YtgsmbUd3Oh5oP8-OCBJi-1HXgE/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                   
+                  >
+                    Resume
+                  </Link>
+            </button>
+           
           </ul>
         </div>
       </nav>
