@@ -155,7 +155,7 @@ const Contact = () => {
           className="flex flex-col w-full font-dosis"
         >
           <h1 className="font-medium text-2xl text-center font-poppins">
-            Write me a Message👇
+            Write me a Message
           </h1>
 
           <div className="w-full mb-4">

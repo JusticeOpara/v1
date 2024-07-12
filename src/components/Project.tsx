@@ -74,7 +74,7 @@ const Project = () => {
     <section id="work" className="md:py-[100px] pt-12 bg-white">
       <div className="flex gap-2 mb-8">
         <h2 className=" flex-shrink-0">
-          <span className="text-2xl font-dosis">02.</span>
+          <span className="text-2xl font-dosis">03.</span>
           <span className="text-3xl font-medium"> Personal projects </span>
         </h2>
         <div className="border-t flex-grow lg:flex-grow-0 w-72 border-black my-4"></div>
@@ -95,7 +95,7 @@ const Project = () => {
                 i % 2 !== 0 ? "" : ""
               } mb-12 md:mb-16 sm:mb-8`}
             >
-              <div className="relative   col-span-full col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 items-end">
+              <div className="relative col-span-full col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 items-end">
           
                 <p className="mb-2 text-[#F7D046] font-poppins text-sm">
                   Featured Project
