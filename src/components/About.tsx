@@ -74,7 +74,7 @@ const About = () => {
                 skills.map((skill, i) => (
                   <li
                     key={i}
-                    className="relative mb-3 text-base font-medium uppercase py-2 flex justify-center items-center bg-[#5b38e3] rounded"
+                    className="relative mb-3 text-base font-medium uppercase py-2 flex justify-center text-[#f7d046] items-center bg-[#5b38e3] rounded"
                   >
                     ✨{skill}
                   </li>

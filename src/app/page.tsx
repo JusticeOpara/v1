@@ -30,7 +30,7 @@ export default function Home() {
           <Navbar isHero={true} />
           <Social />
 
-          <main className="h-full w-full 2xl:px-80 lg:px-[200px] md:px-[100px] mx-auto px-12 mt-4 md:mt-0">
+          <main className="h-full w-screen 2xl:px-80 lg:px-[200px] md:px-[100px] mx-auto px-12 mt-4 md:mt-0">
             <div className="flex justify-center flex-col gap-4 items-start min-h-screen bg-white h-screen text-[#202020] font-poppins">
               <h1 className="font-bold text-4xl md:text-7xl ">Hi,</h1>
 
