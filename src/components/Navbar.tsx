@@ -105,7 +105,7 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
           </TransitionGroup>
         </Link>
 
-        <ul className="hidden md:flex gap-6 items-center">
+        <ul className="hidden lg:flex gap-6 items-center">
           <TransitionGroup component={null}>
             {isMounted &&
               navList.map((item, index) => (
@@ -150,12 +150,12 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
           </TransitionGroup>
         </ul>
 
-        <div className="md:hidden" ref={wrapperRef}>
+        <div className="lg:hidden" ref={wrapperRef}>
           <Image
             onClick={handleClick}
             src="/menu.svg"
-            width={40}
-            height={40}
+            width={34}
+            height={34}
             alt="menu"
           />
 
@@ -172,8 +172,8 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
                     onClick={handleClick}
                     src="/close.svg"
                     className="text-[#5b38e3]"
-                    width={54}
-                    height={54}
+                    width={40}
+                    height={40}
                     alt="close"
                   />
                 </CSSTransition>

@@ -52,11 +52,11 @@ export default function Home() {
               >
                 <Link
                   className="font-medium text-lg cursor-pointer text-[#5b38e3]"
-                  href="#contact"
-                  target="_blank"
+                  href={"#contact"}
                 >
                   Get in touch
                 </Link>
+               
               </p>
             </div>
 

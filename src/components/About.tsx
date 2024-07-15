@@ -46,8 +46,8 @@ const About = () => {
         <div className="lg:flex-grow-0 w-72 border-t border-black my-4"></div>
       </div>
 
-      <div className="flex justify-between flex-col md:flex-row gap-12">
-        <div className="md:w-[700px]">
+      <div className="flex justify-between flex-col lg:flex-row gap-12">
+        <div className="lg:w-[700px]">
           <div className="flex flex-col gap-4">
             <p className="text-base font-light">
               Hello, my name is Justice Opara. I find great joy in creating
@@ -61,7 +61,7 @@ const About = () => {
             <p className="text-base font-light">
               I am passionate about creating seamless user experiences and
               continuously learning new technologies to improve my craft. When
-              &#39;m not coding, you can find me on the court playing basketball.
+              &#39;m not coding, you can find me playing basketball.
             </p>
           </div>
 
@@ -74,7 +74,7 @@ const About = () => {
                 skills.map((skill, i) => (
                   <li
                     key={i}
-                    className="relative mb-3 text-base font-medium uppercase py-2 flex justify-center items-center bg-[#5b38e3] rounded"
+                    className="relative mb-3 text-base font-medium uppercase py-2 flex justify-center items-center text-gray-200 bg-[#5b38e3] rounded"
                   >
                     ✨{skill}
                   </li>

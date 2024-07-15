@@ -97,23 +97,24 @@ const Project = () => {
                 i % 2 !== 0 ? "" : ""
               } mb-12 md:mb-16 sm:mb-8`}
             >
-              <div className="relative col-span-full rounded md:rounded-none p-6 md:p-0 bg-[#5b38e3] md:bg-transparent col-start-1 row-span-full lg:col-span-8  lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 items-end">
+              <div className="relative col-span-full rounded lg:rounded-none p-6 lg:p-0 bg-[#5b38e3] lg:bg-transparent col-start-1 row-span-full lg:col-span-8 lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 lg:items-end">
                 <h3 className="text-lightest-slate text-2xl md:text-xl mb-3">
                   <Link
                     href={external}
-                    className="relative z-10 font-bold text-3xl md:text-[#202020] text-gray-200 "
+                    target="_blank"
+                    className="relative z-10 font-bold text-3xl lg:text-[#202020] text-gray-200"
                   >
                     {title}
                   </Link>
                 </h3>
 
                 <div
-                  className="relative z-50 md:p-6 font-dosis text-light-slate text-lg rounded-md md:shadow-md text--[#f7d046] text-gray-200 texxt-gray-200 bg-[#5b38e3]"
+                  className="relative z-50 lg:p-6 font-dosis text-light-slate text-lg rounded-md lg:shadow-md text--[#f7d046] text-gray-200 bg-[#5b38e3]"
                   dangerouslySetInnerHTML={{ __html: html ?? "" }}
                 />
 
                 {tech.length && (
-                  <ul className="flex flex-wrap my-4  p-0 list-none md:text-[#202020] text-gray-200 ">
+                  <ul className="flex flex-wrap my-4  p-0 list-none lg:text-[#202020] text-gray-200 ">
                     {tech.map((tech, i) => (
                       <li
                         key={i}
@@ -145,8 +146,9 @@ const Project = () => {
                   {external && (
                     <Link
                       href={external}
+                      target="_blank"
                       aria-label="External Link"
-                      className="flex-center mx-2 cursor-pointer bg-black md:bg-transparent"
+                      className="flex-center mx-2 cursor-pointer bg-white lg:bg-transparent"
                     >
                       <Image
                         src="/external.svg"
@@ -159,9 +161,10 @@ const Project = () => {
                 </div>
               </div>
 
-              <div className="relative hidden md:block col-span-6 col-start-auto row-span-full md:col-span-full md:row-span-full w-full h-full">
+              <div className="relative hidden lg:block col-span-6 col-start-auto row-span-full lg:col-span-full lg:row-span-full w-full h-full">
                 <Link
                   href={external ? external : github ? github : "#"}
+                  target="_blank"
                   className="block w-[50%] h-full rounded align-middle"
                 >
                   {/* <div className="absolute inset-0 z-30 transition mix-blend-screen"></div> */}

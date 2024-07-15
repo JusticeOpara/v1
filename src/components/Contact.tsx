@@ -46,6 +46,12 @@ const Contact = () => {
   const form = useRef<HTMLFormElement>(null);
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const [isLoading, setIsLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    user_name: "",
+    user_email: "",
+    message: ""
+  })
 
   useEffect(() => {
     const isClient = typeof window !== "undefined";
@@ -57,7 +63,13 @@ const Contact = () => {
     }
   }, [prefersReducedMotion]);
 
-  const [isLoading, setIsLoading] = useState(false);
+ const handleChange = (e:React.ChangeEvent <HTMLInputElement | HTMLTextAreaElement> )=>{
+ const { name,  value} = e.target
+ setFormData((prevData) => ({...prevData, [name]: value}) )
+ }
+
+
+
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -76,6 +88,7 @@ const Contact = () => {
             "Email sent successfully, You will receive a feedback shortly!"
           );
           setIsLoading(false);
+          setFormData({ user_name: "", user_email: "", message: "" }); // Clear form data
         })
         .catch((error) => {
           console.log(error.text);
@@ -97,7 +110,7 @@ const Contact = () => {
       ref={revealContainer}
       id="contact"
     >
-      <div className="flex gap-2 ">
+      <div className="flex gap-2">
         <h2 className="mb-5  flex-shrink-0">
           {" "}
           <span className="text-2xl font-dosis">04.</span>
@@ -106,7 +119,7 @@ const Contact = () => {
         <div className="border-t lg:flex-grow-0 w-72 border-black my-4"></div>
       </div>
 
-      <div className="flex w-full lg:gap-36 gap-24 md:flex-row flex-col">
+      <div className="flex w-full lg:gap-36 gap-24 lg:flex-row flex-col">
         <div className="font-light text-base font-poppins w-full">
           <p className="mb-1">
             Let&apos;s have a conversation about how I can turn your visions
@@ -161,9 +174,11 @@ const Contact = () => {
           <div className="w-full mb-4">
             <h1 className="font-medium text-lg pb-2">Name</h1>
             <input
-              className=" w-full font-poppins outline-none py-3 border px-2 text-[#202020] rounded border-black outline-0"
+              className=" w-full font-poppins focus:outline-1 focus:border-0 focus:outline-[#5b38e3] py-3 border px-2 text-[#202020] rounded border-black"
               type="text"
               name="user_name"
+              value={formData.user_name}
+              onChange= {handleChange}
               required
             />
           </div>
@@ -171,9 +186,11 @@ const Contact = () => {
           <div className="w-full mb-4">
             <h1 className="font-medium text-lg pb-2">Email</h1>
             <input
-              className="py-3 px-2 w-full border text-lg border-black rounded outline-0 text-[#202020]"
+              className="py-3 px-2 w-full border text-lg border-black  rounded focus:outline-1 focus:border-0 focus:outline-[#5b38e3] text-[#202020]"
               type="email"
               required
+              value={formData.user_email}
+              onChange= {handleChange}
               name="user_email"
             />
           </div>
@@ -182,13 +199,15 @@ const Contact = () => {
             <h1 className="font-medium text-lg pb-2">Message</h1>
             <textarea
               name="message"
-              className="py-3 px-2 w-full text-lg rounded border border-black h-[120px] outline-0 text-[#202020]"
+              value={formData.message}
+              onChange= {handleChange}
+              className="py-3 px-2 w-full text-lg rounded border border-black h-[120px] focus:outline-1 focus:border-0 focus:outline-[#5b38e3] text-[#202020]"
               required
             ></textarea>
           </div>
           <div className="w-full flex justify-center">
             <button
-              className="bg-transparent hover:border-r-4 hover:border-b-4 rounded border-2 border-[#5b38e3] px-4 py-2 md:w-36 w-full items-center"
+              className=" rounded  bg-[#5b38e3] px-4 py-2 md:w-36 w-full items-center"
               type="submit"
               disabled={isLoading}
             >

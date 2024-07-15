@@ -26,7 +26,9 @@ const dummyJobsData: Job[] = [
     url: "http://www.cloudenly.com",
     html: `
     <p>➤ Collaborated with the Quality Assurance team to establish and execute thorough test plans, contributing to a 90% improvement in overall product quality.</p>
+
     <p>➤ ⁠Leveraged modern frontend technologies, such as Vue.js, TailwindCSS, Vuex, and JavaScript, to deliver robust user interfaces and feature updates.</p>
+
     <p>➤ Part of the team to  engineer a comprehensive test routines and schedules that closely mirror external interfaces across diverse browsers and devices, resulting in a 93% reduction in post-deployment issues.</p>`,
   },
   {
@@ -189,7 +191,7 @@ const Experience: React.FC = () => {
 
                 <p className="text-base font-medium font-dosis mb-2">{job.range}</p>
 
-                <div className="md:w-96 w-full font-poppins text-sm font-light text-[#202020]" dangerouslySetInnerHTML={{ __html: job.html }} />
+                <div className="md:w-96 gap-2 flex flex-col w-full font-poppins text-sm font-light text-[#202020]" dangerouslySetInnerHTML={{ __html: job.html }} />
               </div>
             </CSSTransition>
           ))}
