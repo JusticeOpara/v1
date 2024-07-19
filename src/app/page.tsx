@@ -40,10 +40,10 @@ export default function Home() {
               <h2 className="font-bold md:text-6xl text-3xl lg:text-7xl">
                 I build things for the web.
               </h2>
-              <p className="font-poppin font-light max-w-[600px] lg:text-lg text-base">
-                I am a self-taught Software Engineer that crafts things for the
-                Web, heavy focused on front-end development, enthusiastic and
-                fascinated on user interfaces.
+              <p className="font-poppin font-light max-w-[700px] lg:text-lg text-base">
+              I excel in creating dynamic, user-friendly web applications and integrating third-party APIs. 
+              My passion for innovation and continuous learning drives me to deliver seamless and scalable solutions. 
+              Let&apos;s collaborate to turn your ideas into engaging digital experiences.
               </p>
 
               <p

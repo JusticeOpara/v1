@@ -9,9 +9,6 @@ const About = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    // if (typeof window !== "undefined" && !prefersReducedMotion) {
-    //   sr.reveal(revealContainer.current!, srConfig());
-    // }
     const isClient = typeof window !== "undefined";
 
     if (isClient && !prefersReducedMotion) {
@@ -50,24 +47,33 @@ const About = () => {
         <div className="lg:w-[700px]">
           <div className="flex flex-col gap-4">
             <p className="text-base font-light">
-              Hello, my name is Justice Opara. I find great joy in creating
-              digital products that others can see and use. My journey in tech
-              has been quite interesting. From knowing nothing about the field
-              to gaining substantial experience as a self-taught frontend
-              developer, I&#39;ve built numerous personal projects that have helped
-              me grow and understand web development concepts deeply.
+              Hello! I&apos;m Justice Opara, a passionate frontend developer with a
+              knack for creating dynamic and engaging web applications. With
+              expertise in ReactJS, TypeScript, and Tailwind CSS, I craft
+              seamless user experiences that are both visually appealing and
+              highly functional.
             </p>
 
             <p className="text-base font-light">
-              I am passionate about creating seamless user experiences and
-              continuously learning new technologies to improve my craft. When
-              &#39;m not coding, you can find me playing basketball.
+              My journey in web development has been driven by my love for coding
+              and a desire to constantly learn and improve. I thrive on bringing
+              innovative ideas to life, leveraging my skills in modern frontend
+              technologies. I&apos;m particularly skilled in integrating third-party
+              APIs like Sanity, which allows me to build robust and scalable
+              websites without diving into backend complexities.
+            </p>
+
+            <p className="text-base font-light">
+              Beyond coding, I enjoy playing basketball, which helps me stay
+              active and maintain a balanced lifestyle. Whether on the court or
+              behind a screen,I&apos;m always ready to take on new challenges and
+              push my boundaries.
             </p>
           </div>
 
           <div className="mt-5">
             <p className="font-normal mb-2 text-lg">
-              Here are a few technologies I’ve been working with recently:
+              Here are a my current technology stack I’ve been working with recently:
             </p>
             <ul className="grid grid-cols-2 md:grid-cols-3 list-none gap-4 text-center">
               {skills &&

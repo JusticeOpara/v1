@@ -183,7 +183,7 @@ const Experience: React.FC = () => {
                   <span>{job.title}</span>
                   <span className="text-[#5b38e3]">
                     &nbsp;@&nbsp;
-                    <Link href={job.url} className="">
+                    <Link href={job.url} target="_blank"  className="">
                       {job.company}
                     </Link>
                   </span>

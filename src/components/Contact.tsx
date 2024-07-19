@@ -207,7 +207,7 @@ const Contact = () => {
           </div>
           <div className="w-full flex justify-center">
             <button
-              className=" rounded  bg-[#5b38e3] px-4 py-2 md:w-36 w-full items-center"
+              className=" rounded text-gray-200 text-lg  bg-[#5b38e3] px-4 py-2 md:w-36 w-full items-center"
               type="submit"
               disabled={isLoading}
             >
