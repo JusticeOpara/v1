@@ -130,6 +130,7 @@ const Project = () => {
                   {github && (
                     <Link
                       href={github}
+                      target="_blank"
                       aria-label="GitHub Link"
                       className="flex-center mx-2 cursor-pointer "
                     >

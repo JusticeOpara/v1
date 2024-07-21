@@ -26,9 +26,7 @@ const dummyJobsData: Job[] = [
     url: "http://www.cloudenly.com",
     html: `
     <p>➤ Collaborated with the Quality Assurance team to establish and execute thorough test plans, contributing to a 90% improvement in overall product quality.</p>
-
     <p>➤ ⁠Leveraged modern frontend technologies, such as Vue.js, TailwindCSS, Vuex, and JavaScript, to deliver robust user interfaces and feature updates.</p>
-
     <p>➤ Part of the team to  engineer a comprehensive test routines and schedules that closely mirror external interfaces across diverse browsers and devices, resulting in a 93% reduction in post-deployment issues.</p>`,
   },
   {
@@ -36,7 +34,7 @@ const dummyJobsData: Job[] = [
     company: "BleauTech",
     location: "Nigeria (Remote)",
     range: "November 2023 – March 2024",
-    url: "https://companyb.com",
+    url: "https://www.bleautech.com",
     html: `<p>➤ Developed responsive web pages/components and user-friendly interfaces using Axios, Tailwind CSS, JavaScript, and ReactJS.</p>
     <p>➤ Implemented secure authentication functionality, streamlined data management, and enhanced API communication.</p>
     <p>➤  Developed and integrated a payment feature into the app, utilizing the provided payment endpoint from the backend.</p>`,
@@ -46,7 +44,7 @@ const dummyJobsData: Job[] = [
     company: "Rock&Art",
     location: "United Kingdom (Remote)",
     range: "July 2023 - December 2023",
-    url: "https://www.rockandart.org/",
+    url: "https://www.rockandart.org",
     html: `<p>➤ Collaborated with our design team to implement user-friendly interfaces and write clean, maintainable, and efficient code for web applications.</p>
     <p>➤ Debug, troubleshoot, and optimize web applications for maximum speed and scalability</p>
     <p>➤ My primary responsibility is building and managing websites with a team of Creative developers. 
