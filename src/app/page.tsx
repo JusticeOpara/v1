@@ -35,7 +35,7 @@ export default function Home() {
               <h1 className="font-bold text-4xl md:text-7xl ">Hi,</h1>
 
               <h2 className="font-bold md:text-6xl text-3xl lg:text-7xl">
-                I am <span className="text-[#5b38e3]"> Justice Opara</span>{" "}
+                I am <span className="text-[#5b38e3]"> Justice Opara</span>{""}
               </h2>
               <h2 className="font-bold md:text-6xl text-3xl lg:text-7xl">
                 I build things for the web.

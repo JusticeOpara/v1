@@ -22,7 +22,7 @@ const dummyJobsData: Job[] = [
     title: "Software Engineer",
     company: "Scelloo",
     location: "Nigeria (Remote)",
-    range: "April 2024 - Present",
+    range: "Jan 2024 - Present",
     url: "http://www.cloudenly.com",
     html: `
     <p>➤ Collaborated with the Quality Assurance team to establish and execute thorough test plans, contributing to a 90% improvement in overall product quality.</p>
@@ -33,7 +33,7 @@ const dummyJobsData: Job[] = [
     title: "Frontend Developer",
     company: "BleauTech",
     location: "Nigeria (Remote)",
-    range: "November 2023 – March 2024",
+    range: "Jan 2023 – Dec 2023",
     url: "https://www.bleautech.com",
     html: `<p>➤ Developed responsive web pages/components and user-friendly interfaces using Axios, Tailwind CSS, JavaScript, and ReactJS.</p>
     <p>➤ Implemented secure authentication functionality, streamlined data management, and enhanced API communication.</p>
@@ -43,7 +43,7 @@ const dummyJobsData: Job[] = [
     title: "Intern",
     company: "Rock&Art",
     location: "United Kingdom (Remote)",
-    range: "July 2023 - December 2023",
+    range: "Jan 2023 - December 2023",
     url: "https://www.rockandart.org",
     html: `<p>➤ Collaborated with our design team to implement user-friendly interfaces and write clean, maintainable, and efficient code for web applications.</p>
     <p>➤ Debug, troubleshoot, and optimize web applications for maximum speed and scalability</p>

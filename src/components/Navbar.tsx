@@ -135,7 +135,7 @@ const Navbar: React.FC<NavProps> = ({ isHero }) => {
               {isMounted && (
                 <CSSTransition classNames={fadeDownClass} timeout={timeout}>
                   <Link
-                    href="https://drive.google.com/file/d/1VQig2YtgsmbUd3Oh5oP8-OCBJi-1HXgE/view?usp=drive_link"
+                    href="https://drive.google.com/file/d/1CQE3xJxphQxbnlhWeLnm4wuTDz-wwO5n/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
