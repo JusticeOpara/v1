@@ -35,6 +35,7 @@ const dummyData: ProjectData[] = [
     Managed state efficiently with the Context API to enhance performance and user experience.</p>`,
     orientation: random(),
   },
+
   {
     external: "https://nft-bazzar.netlify.app/",
     title: "Nft Bazzar",
@@ -45,6 +46,20 @@ const dummyData: ProjectData[] = [
     This platform is a fully responsive, elegantly designed website that represents the forefront of Web3 technology.
      It empowers users to create and collect NFTs effortlessly. Key features of NFT Bazaar includes: a visually appealing and user-friendly interface, a 'like' feature allowing users to express appreciation and engage with NFTs.
     To build this platform, I utilized industry-leading technologies such as ReactJS, Tailwind CSS, Framer Motion, and TypeScript, ensuring a smooth and dynamic user experience. The combination of these technologies allows NFT Bazaar to deliver a vibrant and interactive marketplace for digital art and collectibles.</p>`,
+    orientation: random(),
+  },
+  {
+    external: "https://foodie-orcin-five.vercel.app/",
+    title: "Foodie",
+    tech: ["TheMealDB API", "Tailwind CSS", "Vuex", "VueJs"],
+    github: "https://github.com/JusticeOpara/fast-food",
+    cover: "/screenshot04.png",
+    html: `<p>Foodie is a cutting-edge culinary application designed to offer users a seamless and engaging experience in discovering meal options.
+     Through robust integration with a dynamic API, Foodie allows users to effortlessly search for recipes by keywords, 
+     specific ingredients, or even by the first letter of the dish.
+The platform is meticulously crafted using Vue.js and TailwindCSS, ensuring a responsive and visually appealing user interface 
+that enhances both the functionality and aesthetic appeal of the application. With a focus on user engagement, Foodie delivers a professional, 
+intuitive, and visually captivating experience, making it easier than ever for users to explore and enjoy a world of culinary possibilities.</p>`,
     orientation: random(),
   },
 ];
@@ -94,7 +109,7 @@ const Project = () => {
                 revealProjects.current[i] = el;
               }}
               className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] ${
-                i % 2 !== 0 ? "" : ""
+                i % 2 !== 0 ? " " : ""
               } mb-12 md:mb-16 sm:mb-8`}
             >
               <div className="relative col-span-full rounded lg:rounded-none p-6 lg:p-0 bg-[#5b38e3] lg:bg-transparent col-start-1 row-span-full lg:col-span-8 lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 lg:items-end">
