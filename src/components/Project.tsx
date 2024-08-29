@@ -23,6 +23,21 @@ const random = () => {
 // Dummy data
 const dummyData: ProjectData[] = [
   {
+    external: "https://code-exchange-zeta.vercel.app/",
+    title: "CodeExchange",
+    tech: ["NextJs","TypeScript", "Tailwind CSS", "MongoDB", "Mongoose", "Clerk Auth"],
+    github: "https://github.com/JusticeOpara/code-exchange",
+    cover: "/codeBlack.png",
+    html: `<p>Code Exchange is a modern Q&A platform for developers, inspired by Stack Overflow and built with advanced technologies. 
+    It features a Next.js 14 frontend for high performance and a Mongoose and MongoDB backend for robust data management. 
+    Key features include AI-generated answers, a badge and reputation system, secure authentication via Clerk, 
+    and a responsive Shadcn UI design. Users can organize content through collections, 
+    vote on posts, track engagement, and discover job opportunities. 
+    With dark and light modes, powerful search, and mobile responsiveness, 
+    Code Exchange provides a seamless, community-driven experience for developers to ask questions and share knowledge.</p>`,
+    orientation: random(),
+  },
+  {
     external: "https://cyptocurrency.netlify.app/",
     title: "Cyptocere",
     tech: ["React", "JavaScript", "TailwindCSS", "Firebase", "Redux"],
@@ -62,10 +77,12 @@ that enhances both the functionality and aesthetic appeal of the application. Wi
 intuitive, and visually captivating experience, making it easier than ever for users to explore and enjoy a world of culinary possibilities.</p>`,
     orientation: random(),
   },
+  
 ];
 
 const Project = () => {
   const [featuredProjects, setFeaturedProjects] = useState<ProjectData[]>([]);
+  const [showAll, setShowAll] = useState(false);
   const revealTitle = useRef(null);
   const revealProjects = useRef<(HTMLLIElement | null)[]>([]);
   const prefersReducedMotion = usePrefersReducedMotion();
@@ -88,6 +105,9 @@ const Project = () => {
     }
   }, [featuredProjects, prefersReducedMotion]);
 
+  const toggleShowMore = () => {
+    setShowAll((prevShowAll) => !prevShowAll);
+  };
   return (
     <section id="work" className="md:py-[100px] pt-12 bg-white">
       <div className="flex gap-2 mb-10">
@@ -98,8 +118,9 @@ const Project = () => {
         <div className="border-t flex-grow lg:flex-grow-0 w-72 border-black my-4"></div>
       </div>
 
-      <ul className="">
-        {featuredProjects.map((project, i) => {
+      <ul className="flex flex-col items-center">
+      {(showAll ? featuredProjects : featuredProjects.slice(0, 2)).map((project, i) => {
+        // {featuredProjects.map((project, i) => {
           const { external, title, tech, github, cover, html } = project;
 
           return (
@@ -194,6 +215,14 @@ const Project = () => {
             </li>
           );
         })}
+             <button
+                className="bg-transparent hover:border-r-4 text-xl cursor-pointer text-[#5b38e3] hover:border-b-4 rounded border border-[#5b38e3] w-40  py-3 hover:shadow-[#5b38e3]
+             hover:translate-x-[-4px] hover:translate-y-[-4px] font-medium focus-visible:translate-x-[-4px] focus-visible:translate-y-[-4px]"
+             onClick={toggleShowMore}
+              >
+              {showAll ? "Show Less" : "Show More"}
+              </button>
+        
       </ul>
     </section>
   );
