@@ -19,6 +19,18 @@ interface Job {
 
 const dummyJobsData: Job[] = [
   {
+    title: "Web Engineer",
+    company: "Homiverse",
+    location: "Nigeria (Remote)",
+    range: "Oct 2024 - Feb 2025",
+    url: "https://homiverse.ng",
+    html: `
+    <p>➤ Collaborated with design and backend teams to develop a high-performing, user-friendly Admin dashboard for homiverse.</p>
+    <p>➤ ⁠Leveraged modern frontend technologies, such as NextJs, TailwindCSS, React, and JavaScript, to deliver robust user interfaces and feature updates.</p>
+    <p>➤Engineered and implemented a real-time communication system between customer representatives and users utilizing Firebase, 
+    enabling seamless support interactions and enhancing overall customer satisfaction. .</p>`,
+  },
+  {
     title: "Frontend Developer",
     company: "Scelloo",
     location: "Nigeria (Remote)",
