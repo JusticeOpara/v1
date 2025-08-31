@@ -25,7 +25,14 @@ const dummyData: ProjectData[] = [
   {
     external: "https://code-exchange-zeta.vercel.app/",
     title: "CodeExchange",
-    tech: ["NextJs","TypeScript", "Tailwind CSS", "MongoDB", "Mongoose", "Clerk Auth"],
+    tech: [
+      "NextJs",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "Mongoose",
+      "Clerk Auth",
+    ],
     github: "https://github.com/JusticeOpara/code-exchange",
     cover: "/codeBlack.png",
     html: `<p>Code Exchange is a modern Q&A platform for developers, inspired by Stack Overflow and built with advanced technologies. 
@@ -37,6 +44,20 @@ const dummyData: ProjectData[] = [
     Code Exchange provides a seamless, community-driven experience for developers to ask questions and share knowledge.</p>`,
     orientation: random(),
   },
+  {
+    external: "https://rickandmorty-react-challenge.vercel.app/",
+    title: "Rick And Morty Universe",
+    tech: ["NextJs", "TypeScript", "TailwindCSS", "RTK Query", "Redux"],
+    github: "https://github.com/JusticeOpara/rickandmorty",
+    cover: "screenshot05.png",
+    html: `<p>Rick & Morty Explorer is an interactive single-page application built with Next.js and TypeScript that lets users dive into the multiverse of characters, episodes, and locations from the Rick and Morty API. 
+It features a seamless paginated list and detail view, with advanced search, filter, and sort capabilities synced to the URL for shareability. 
+Users can favorite characters for quick access, with persistence powered by localStorage and an optimistic UI for smooth interactions. 
+Built with React Query for client-side caching and instant navigation, the app also includes loading skeletons, error boundaries, and request cancellation for a robust user experience. 
+With a responsive Tailwind CSS design, and Vercel deployment, Rick & Morty Explorer delivers a fast, polished, and modern way to explore the multiverse.</p>`,
+    orientation: random(),
+  },
+
   {
     external: "https://cyptocurrency.netlify.app/",
     title: "Cyptocere",
@@ -77,7 +98,6 @@ that enhances both the functionality and aesthetic appeal of the application. Wi
 intuitive, and visually captivating experience, making it easier than ever for users to explore and enjoy a world of culinary possibilities.</p>`,
     orientation: random(),
   },
-  
 ];
 
 const Project = () => {
@@ -119,110 +139,111 @@ const Project = () => {
       </div>
 
       <ul className="flex flex-col items-center">
-      {(showAll ? featuredProjects : featuredProjects.slice(0, 2)).map((project, i) => {
-        // {featuredProjects.map((project, i) => {
-          const { external, title, tech, github, cover, html } = project;
+        {(showAll ? featuredProjects : featuredProjects.slice(0, 2)).map(
+          (project, i) => {
+            // {featuredProjects.map((project, i) => {
+            const { external, title, tech, github, cover, html } = project;
 
-          return (
-            <li
-              key={i}
-              ref={(el) => {
-                revealProjects.current[i] = el;
-              }}
-              className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] ${
-                i % 2 !== 0 ? " " : ""
-              } mb-12 md:mb-16 sm:mb-8`}
-            >
-              <div className="relative col-span-full rounded lg:rounded-none p-6 lg:p-0 bg-[#5b38e3] lg:bg-transparent col-start-1 row-span-full lg:col-span-8 lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 lg:items-end">
-                <h3 className="text-lightest-slate text-2xl md:text-xl mb-3">
-                  <Link
-                    href={external}
-                    target="_blank"
-                    className="relative z-10 font-bold text-3xl lg:text-[#202020] text-gray-200"
-                  >
-                    {title}
-                  </Link>
-                </h3>
-
-                <div
-                  className="relative z-50 lg:p-6 font-dosis text-light-slate text-lg rounded-md lg:shadow-md text--[#f7d046] text-gray-200 bg-[#5b38e3]"
-                  dangerouslySetInnerHTML={{ __html: html ?? "" }}
-                />
-
-                {tech.length && (
-                  <ul className="flex flex-wrap my-4  p-0 list-none lg:text-[#202020] text-gray-200 ">
-                    {tech.map((tech, i) => (
-                      <li
-                        key={i}
-                        className="mr-5 mb-1 text-sm font-bold md:mr-2"
-                      >
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
-                )}
-
-                <div className="flex items-center ml-0 -mx-2">
-                  {github && (
-                    <Link
-                      href={github}
-                      target="_blank"
-                      aria-label="GitHub Link"
-                      className="flex-center mx-2 cursor-pointer "
-                    >
-                      <Image
-                        src="/github.svg"
-                        width={24}
-                        height={24}
-                        alt={github}
-                        className="text-[#5b38e3]"
-                      />
-                    </Link>
-                  )}
-
-                  {external && (
+            return (
+              <li
+                key={i}
+                ref={(el) => {
+                  revealProjects.current[i] = el;
+                }}
+                className={`relative grid gap-2 grid-cols-12 items-center text-[#202020] ${
+                  i % 2 !== 0 ? " " : ""
+                } mb-12 md:mb-16 sm:mb-8`}
+              >
+                <div className="relative col-span-full rounded lg:rounded-none p-6 lg:p-0 bg-[#5b38e3] lg:bg-transparent col-start-1 row-span-full lg:col-span-8 lg:col-start-6 lg:row-span-full sm:flex sm:flex-col sm:justify-center sm:h-full sm:col-span-full sm:p-10 sm:z-10 lg:items-end">
+                  <h3 className="text-lightest-slate text-2xl md:text-xl mb-3">
                     <Link
                       href={external}
                       target="_blank"
-                      aria-label="External Link"
-                      className="flex-center mx-2 cursor-pointer bg-white lg:bg-transparent"
+                      className="relative z-10 font-bold text-3xl lg:text-[#202020] text-gray-200"
                     >
-                      <Image
-                        src="/external.svg"
-                        width={24}
-                        height={24}
-                        alt={external}
-                      />
+                      {title}
                     </Link>
-                  )}
-                </div>
-              </div>
+                  </h3>
 
-              <div className="relative hidden lg:block col-span-6 col-start-auto row-span-full lg:col-span-full lg:row-span-full w-full h-full">
-                <Link
-                  href={external ? external : github ? github : "#"}
-                  target="_blank"
-                  className="block w-[50%] h-full rounded align-middle"
-                >
-                  {/* <div className="absolute inset-0 z-30 transition mix-blend-screen"></div> */}
-                  <img
-                    src={cover}
-                    alt={title}
-                    className="rounded-md h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 object-fill w-auto h-full filter-brightness-50"
+                  <div
+                    className="relative z-50 lg:p-6 font-dosis text-light-slate text-lg rounded-md lg:shadow-md text--[#f7d046] text-gray-200 bg-[#5b38e3]"
+                    dangerouslySetInnerHTML={{ __html: html ?? "" }}
                   />
-                </Link>
-              </div>
-            </li>
-          );
-        })}
-             <button
-                className="bg-transparent hover:border-r-4 text-xl cursor-pointer text-[#5b38e3] hover:border-b-4 rounded border border-[#5b38e3] w-40  py-3 hover:shadow-[#5b38e3]
+
+                  {tech.length && (
+                    <ul className="flex flex-wrap my-4  p-0 list-none lg:text-[#202020] text-gray-200 ">
+                      {tech.map((tech, i) => (
+                        <li
+                          key={i}
+                          className="mr-5 mb-1 text-sm font-bold md:mr-2"
+                        >
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="flex items-center ml-0 -mx-2">
+                    {github && (
+                      <Link
+                        href={github}
+                        target="_blank"
+                        aria-label="GitHub Link"
+                        className="flex-center mx-2 cursor-pointer "
+                      >
+                        <Image
+                          src="/github.svg"
+                          width={24}
+                          height={24}
+                          alt={github}
+                          className="text-[#5b38e3]"
+                        />
+                      </Link>
+                    )}
+
+                    {external && (
+                      <Link
+                        href={external}
+                        target="_blank"
+                        aria-label="External Link"
+                        className="flex-center mx-2 cursor-pointer bg-white lg:bg-transparent"
+                      >
+                        <Image
+                          src="/external.svg"
+                          width={24}
+                          height={24}
+                          alt={external}
+                        />
+                      </Link>
+                    )}
+                  </div>
+                </div>
+
+                <div className="relative hidden lg:block col-span-6 col-start-auto row-span-full lg:col-span-full lg:row-span-full w-full h-full">
+                  <Link
+                    href={external ? external : github ? github : "#"}
+                    target="_blank"
+                    className="block w-[50%] h-full rounded align-middle"
+                  >
+                    {/* <div className="absolute inset-0 z-30 transition mix-blend-screen"></div> */}
+                    <img
+                      src={cover}
+                      alt={title}
+                      className="rounded-md h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 object-fill w-auto h-full filter-brightness-50"
+                    />
+                  </Link>
+                </div>
+              </li>
+            );
+          }
+        )}
+        <button
+          className="bg-transparent hover:border-r-4 text-xl cursor-pointer text-[#5b38e3] hover:border-b-4 rounded border border-[#5b38e3] w-40  py-3 hover:shadow-[#5b38e3]
              hover:translate-x-[-4px] hover:translate-y-[-4px] font-medium focus-visible:translate-x-[-4px] focus-visible:translate-y-[-4px]"
-             onClick={toggleShowMore}
-              >
-              {showAll ? "Show Less" : "Show More"}
-              </button>
-        
+          onClick={toggleShowMore}
+        >
+          {showAll ? "Show Less" : "Show More"}
+        </button>
       </ul>
     </section>
   );
