@@ -45,7 +45,7 @@ const dummyData: ProjectData[] = [
     orientation: random(),
   },
   {
-    external: "https://rickandmorty-react-challenge.vercel.app/",
+    external: "https://rickandmorty-universal.vercel.app",
     title: "Rick And Morty Universe",
     tech: ["NextJs", "TypeScript", "TailwindCSS", "RTK Query", "Redux"],
     github: "https://github.com/JusticeOpara/rickandmorty",
