@@ -27,6 +27,7 @@ const About = () => {
     "Vue",
     "NextJs",
     "NuxtJs",
+    "NodeJs"
   ];
 
   return (
