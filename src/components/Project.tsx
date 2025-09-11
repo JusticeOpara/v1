@@ -71,19 +71,32 @@ With a responsive Tailwind CSS design, and Vercel deployment, Rick & Morty Explo
     Managed state efficiently with the Context API to enhance performance and user experience.</p>`,
     orientation: random(),
   },
-
-  {
-    external: "https://nft-bazzar.netlify.app/",
-    title: "Nft Bazzar",
-    tech: ["Framer Motion", "Tailwind CSS", "TypeScript", "ReactJS"],
-    github: "https://github.com/JusticeOpara/nft-bazaar",
-    cover: "/screenshot.png",
-    html: `<p>Designed and developed an innovative Digital NFT marketplace named NFT Bazaar. 
-    This platform is a fully responsive, elegantly designed website that represents the forefront of Web3 technology.
-     It empowers users to create and collect NFTs effortlessly. Key features of NFT Bazaar includes: a visually appealing and user-friendly interface, a 'like' feature allowing users to express appreciation and engage with NFTs.
-    To build this platform, I utilized industry-leading technologies such as ReactJS, Tailwind CSS, Framer Motion, and TypeScript, ensuring a smooth and dynamic user experience. The combination of these technologies allows NFT Bazaar to deliver a vibrant and interactive marketplace for digital art and collectibles.</p>`,
+   {
+    external: "https://cyptocurrency.netlify.app/",
+    title: "KMB Styles",
+    tech: ["React", "JavaScript", "TailwindCSS"],
+    github: "https://github.com/JusticeOpara/kmb-styles",
+    cover: "screenshot06.png",
+    html: `<p>Developed a fully responsive and user-friendly e-commerce web application for a men’s fashion brand, featuring dynamic product listings, 
+    category-based filtering, and intuitive navigation. 
+    Implemented a clean and modern UI with product cards, collection sorting, and integrated search and filter functionality for an optimized shopping experience. 
+    Designed the layout to highlight premium clothing items with clear imagery, pricing, and descriptions. 
+    Ensured scalability, accessibility, and cross-device compatibility to deliver a seamless customer journey from browsing to checkout.</p>`,
     orientation: random(),
   },
+
+  // {
+  //   external: "https://nft-bazzar.netlify.app/",
+  //   title: "Nft Bazzar",
+  //   tech: ["Framer Motion", "Tailwind CSS", "TypeScript", "ReactJS"],
+  //   github: "https://github.com/JusticeOpara/nft-bazaar",
+  //   cover: "/screenshot.png",
+  //   html: `<p>Designed and developed an innovative Digital NFT marketplace named NFT Bazaar. 
+  //   This platform is a fully responsive, elegantly designed website that represents the forefront of Web3 technology.
+  //    It empowers users to create and collect NFTs effortlessly. Key features of NFT Bazaar includes: a visually appealing and user-friendly interface, a 'like' feature allowing users to express appreciation and engage with NFTs.
+  //   To build this platform, I utilized industry-leading technologies such as ReactJS, Tailwind CSS, Framer Motion, and TypeScript, ensuring a smooth and dynamic user experience. The combination of these technologies allows NFT Bazaar to deliver a vibrant and interactive marketplace for digital art and collectibles.</p>`,
+  //   orientation: random(),
+  // },
   {
     external: "https://foodie-orcin-five.vercel.app/",
     title: "Foodie",
@@ -226,11 +239,16 @@ const Project = () => {
                     className="block w-[50%] h-full rounded align-middle"
                   >
                     {/* <div className="absolute inset-0 z-30 transition mix-blend-screen"></div> */}
-                    <img
-                      src={cover}
-                      alt={title}
-                      className="rounded-md h-full mix-blend-multiply filter-grayscale filter-contrast-100 filter-brightness-90 object-fill w-auto h-full filter-brightness-50"
-                    />
+ {/* <img 
+  src={cover} 
+  alt={title} 
+  className="rounded-md h-full w-auto object-fill mix-blend-multiply filter grayscale contrast-100 brightness-50 hover:filter-none transition-all duration-300" 
+/> */}
+<img 
+  src={cover} 
+  alt={title} 
+  className="rounded-md h-full w-auto object-fill mix-blend-multiply filter grayscale contrast-100 brightness-50 hover:grayscale-0 hover:brightness-100 transition-all duration-300" 
+/>
                   </Link>
                 </div>
               </li>
